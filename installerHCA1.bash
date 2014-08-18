@@ -44,7 +44,7 @@ cat << "EOF"
      /           //  /
  \_/' \         |/  /         ██░ ██  ▄████▄        █▄▄
   |    |   _,^-'/  /         ▓██░ ██▒▒██▀ ▀█       ▒████▄
-  |    , ``  (\/  /_         ▒██▀▀██░▒▓█   ▄▄      ▒██  ▀█▄
+  |    , W``  (\/  /_         ▒██▀▀██░▒▓█   ▄▄      ▒██  ▀█▄
    \,.->._    \X-=/^         ░▓█ ░██ ▒▓▓▄ ▄██▒     ░██▄▄▄▄██▄
    (  /   `-._//^`           ░▓█▒░██░▒ ▓███▀ ░ ██▓  ▓█    ▓██▒  ██▓
     `Y-.____(__}              ▒ ░░▒░▒░ ░▒ ▒  ░ ▒▓▒  ▒▓    ▓▒██░  ▒▓▒
@@ -819,10 +819,9 @@ export PATH="/usr/local/bin:$PATH"
 source ~/.bash_profile
 source ~/.zsh_profile
 
-
 brew install node
 
-echo "[[SUBLIME3]]---[[H:CA Script v1 beta]] >> ~/Desktop/README_SUBLIME3.txt
+echo "[[SUBLIME3]]---[[H:CA Script v1 beta]]" >> ~/Desktop/README_SUBLIME3.txt
 echo "To install Sublime Text 3: Download and open the .dmg file, and then drag the Sublime Text 3 bundle into the Applications folder." >> ~/Desktop/README_SUBLIME3.txt
 
 # INSTALLING GIT
@@ -839,8 +838,10 @@ fi
     sleep 2
     clear
     echo
+  
     
 cat << "EOF"
+
                            `:+ssss+`
                          .oyo+++++ys
                   `-:+o+oyo+shyhsys.
@@ -1032,7 +1033,7 @@ EOF
         then
                  echo "0 7 1 6 1 rm -f ~/.cache/thumbnails/normal && echo 'Image thumbnail folder has been wiped in order to free up disk space.    [H:CA Script v1 beta]'" | crontab -
 
-                 crontab -l > file.txt; echo "0 7 1 12 1 rm -f ~/.cache/thumbnails/normal && echo 'Image thumbnail folder has been wiped in order to free up disk space.    [H:CA Script v1 bet$
+                 crontab -l > file.txt; echo "0 7 1 12 1 rm -f ~/.cache/thumbnails/normal && echo 'Image thumbnail folder has been wiped in order to free up disk space.    [H:CA Script v1 beta'" >> file.txt; crontab file.txt
 
                  rm -rf file.txt
 
@@ -1051,7 +1052,7 @@ EOF
     echo
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
-                crontab -l > file.txt; echo "'30 6 * * 2 tripwire -m p /etc/tripwire/twpol.txt' >> file.txt; crontab file.txt
+                crontab -l > file.txt; echo '30 6 * * 2 tripwire -m p /etc/tripwire/twpol.txt' >> file.txt; crontab file.txt
                 rm -rf file.txt
 
         fi
@@ -1065,14 +1066,14 @@ EOF
 echo >> ~/Desktop/OSTWEAKS.txt
 echo "SUDO CRONTAB -e TO ADD A CRONTAB AS ROOT. NEXT, YOU WILL COPY PASTA THE FOLLOWING LINES THEREINTO:" >> ~/Desktop/OSTWEAKS.txt
 echo "wARNING: YOU WILL HAVE TO ADJUST THE EMAIL ADDRESS TO <YOURUSERNAME>@LOCALHOST, HOWEVER!" >> ~/Desktop/OSTWEAKS.txt
-echo "#TO UPDATE TRIPWIRE @MONTHLY" >> ~/Desktop/OSTWEAKS.txt
+echo "#TO UPDATE TRIPWIRE" >> ~/Desktop/OSTWEAKS.txt
 echo "@weekly tripwire -m p /etc/tripwire/twpol.txt" >> ~/Desktop/OSTWEAKS.txt
 echo >> ~/Desktop/OSTWEAKS.txt
-echo '30 6 */3 * * rkhunter -c | mail -s "Daily rkhunter report for `uname -n`" inf@localhost' >> ~/Desktop/OSTWEAKS.txt
+echo "30 6 */3 * * rkhunter -c | mail -s 'Daily rkhunter report' inf@localhost" >> ~/Desktop/OSTWEAKS.txt
 echo >> ~/Desktop/OSTWEAKS.txt
-echo '15 7 */3 * * chkrootkit | mail -s "Daily chkrootkit report for `uname -n`" inf@localhost' >> ~/Desktop/OSTWEAKS.txt
+echo "15 7 */3 * * chkrootkit | mail -s 'Daily chkrootkit report' inf@localhost" >> ~/Desktop/OSTWEAKS.txt
 echo >> ~/Desktop/OSTWEAKS.txt
-echo '30 7 * * * /usr/sbin/tripwire --check | mail -s "Weekly Tripwire report for `uname -n`" inf@localhost' >> ~/Desktop/OSTWEAKS.txt
+echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' inf@localhost" >> ~/Desktop/OSTWEAKS.txt
 
 
 
