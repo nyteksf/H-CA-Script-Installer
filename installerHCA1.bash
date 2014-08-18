@@ -9,7 +9,7 @@
 #													 #
 #======================================================================================================= #
 # USAGE INSTRUCTIONS:											 #
-# To run the installer, open terminal and type  `bash hcaInstaller1.bash`  within currently 		 #
+# To run the installer, open terminal and type  `bash installerHCA1.bash`  within currently 		 #
 # installed-to folder.              									 #
 #													 #
 # ABOUT: 												 #
