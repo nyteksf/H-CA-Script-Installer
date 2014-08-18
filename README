@@ -11,4 +11,4 @@ NOTES:
 out any unwanted package(s) by simply adding a "#" to the beginning of each respective line.          
  -The OS Optimization script is only for Linux at this time. Furthermore, it can only be run ONE TIME  
 due to file changes being repeated otherwise. Using -t more than once will damage your system.         
- -On your local desktop: look for the appearance of related post-install README files.                 
+ -On your local desktop: look for the appearance of several related post-install README files.                 
