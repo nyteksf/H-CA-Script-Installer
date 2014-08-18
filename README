@@ -9,9 +9,7 @@ contains optional system tweaks for enhancing general ease of use, and comfort.
                                                                                                        
 NOTES:                                                                                                 
 -Read over this whole file once, first, before executing it. In your doing so,
- you may wish to comment out any unwanted package(s) by simply adding a "#" to the
-beginning of each respective line.          
--The OS Optimization script is only for Linux at this time. Furthermore, it can only
-be run ONE TIME due to file changes being repeated otherwise. Using -t more than once 
-will damage your system.         
+ you may wish to comment out any unwanted package(s) by simply adding a "#" 
+to the beginning of each respective line.          
+-The OS Optimization script is only for Linux at this time. Furthermore, it can only be run ONE TIME due to file changes being repeated otherwise. Using -t more than once will damage your system.         
 -On your local desktop: look for the appearance of several related post-install README files.                 
