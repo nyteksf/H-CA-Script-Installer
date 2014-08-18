@@ -9,7 +9,7 @@
 #													 #
 #======================================================================================================= #
 # USAGE INSTRUCTIONS:											 #
-# To run, type  `bash <thisFileName>`  in its currently installed-to folder.                             #
+# To run the installer, type  `bash <thisFileName>`  in its currently installed-to folder.               #
 #													 #
 # ABOUT: 												 #
 # A simple Bash script put together by H:CA Student Joe Coviello which installs certain			 #

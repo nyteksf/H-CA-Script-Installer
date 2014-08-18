@@ -1,0 +1,16 @@
+#X######################################################################################################X#
+# USAGE INSTRUCTIONS:                                                                                    #
+# To run the installer, type  `bash <thisFileName>`  in its currently installed-to folder.               #
+#                                                                                                        #
+# ABOUT:                                                                                                 #
+# A simple Bash script put together by H:CA Student Joe Coviello which installs certain                  #
+# useful packages, and for particularly after completing a fresh install. It also                        #
+# contains optional system tweaks for enhancing general ease of use, and comfort.                        #
+#                                                                                                        #
+# NOTES:                                                                                                 #
+# -Read over this whole file once, first, before executing it. In your doing so, you may wish to comment #
+#  out any unwanted package(s) by simply adding a "#" to the beginning of each respective line.          #
+# -The OS Optimization script is only for Linux at this time. Furthermore, it can only be run ONE TIME   #
+#  due to file changes being repeated otherwise. Using -t more than once will damage your system.        #
+# -On your local desktop: look for the appearance of related post-install README files.                  #
+#X######################################################################################################X#
