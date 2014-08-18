@@ -3,9 +3,7 @@
  installed-to folder.               
                                                                                                         
  ABOUT:                                                                                                 
- A simple Bash script put together by H:CA Student Joe Coviello which installs certain 
-useful packages, and for particularly after completing a fresh install. It also
-contains optional system tweaks for enhancing general ease of use, and comfort.                        
+ A simple Bash script put together by H:CA Student Joe Coviello which installs certain useful packages, and for particularly after completing a fresh install. It also ontains optional system tweaks for enhancing general ease of use, and comfort.                        
                                                                                                        
 NOTES:                                                                                                 
 -Read over this whole file once, first, before executing it. In your doing so,
