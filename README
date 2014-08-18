@@ -1,11 +1,11 @@
- USAGE INSTRUCTIONS:                                                                                    
+\ USAGE INSTRUCTIONS:                                                                                    
  To run the installer, type  `bash <thisFileName>`  in its currently installed-to folder.               
                                                                                                         
 
  ABOUT:                                                                                                 
- A simple Bash script put together by H:CA Student Joe Coviello which installs certain                  
- useful packages, and for particularly after completing a fresh install. It also                        
- contains optional system tweaks for enhancing general ease of use, and comfort.                        
+ A simple Bash script put together by H:CA Student Joe Coviello which installs certain
+useful packages, and for particularly after completing a fresh install. It also
+contains optional system tweaks for enhancing general ease of use, and comfort.                        
                                                                                                        
 
 NOTES:                                                                                                 
