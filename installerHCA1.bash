@@ -311,8 +311,12 @@ clear
             echo
             read -p "/   /   /  /// Is your GitHub Account all set up and logged in? Press [Y/n] to continue." -n 1
             echo
-	    pbcopy < ~/.ssh/id_rsa.pub
+	    
+	    sudo apt-get install xclip
+# Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`)
 
+	    xclip -sel clip < ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard
             echo
             echo
             echo
@@ -830,6 +834,11 @@ brew install git
 
 # CONFIGURING GIT
 
+
+pbcopy < ~/.ssh/id_rsa.pub
+
+
+
 fi
   
   
@@ -1157,7 +1166,7 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo >> ~/.bash_aliases
     #
     echo "- Navigate up the directory path using '..n' instead of 'cd ../../'" >> ~/Desktop/README_NEWALIASES.txt
-    echo "      Instead of doing 'cd ..', to 'cd ../../../../..', use '..' to '..5 instead." >> ~/Desktop/README_NEWALIASES.txt
+    echo "      Instead of doing 'cd ..', to 'cd ../../../../..', use '..' to '..5' instead." >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
    
    
@@ -1170,7 +1179,7 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     # DISABLE TOUCHPAD WHILE TYPING, AND APPLY A MORE REASONABLE TIME-DELAY HENCEFORTH
     echo 'alias tpdoff="syndaemon -i 1.0 -K -R -t -d"' >> ~/.bash_aliases
     echo 'alias "tpdoff" added to kill mouse touchpad while typing, with a 1 second delay.' >> ~/Desktop/README_NEWALIASES.txt 
-    echo "No more dragging your palm over the laptop touchpad while typing." >> ~/Desktop/README_NEWALIASES.txt 
+    echo "No more accidentally dragging your palm over the laptop touchpad while typing." >> ~/Desktop/README_NEWALIASES.txt 
     
 
 read -p "/   /  /  /// Would you like to install OS Security upgrades?  Press [Y/n] to continue." -n 1 -r
@@ -1202,7 +1211,7 @@ echo
 	  echo "[[SNORT IDS]---[H:CA Script v1 beta]] > ~/Desktop/README_SNORTIDS.txt"
       	  echo >> ~/Desktop/README_SNORTIDS.txt
       	  echo "SIGN UP FOR AN OINKCODE NOW! USE IT TO STAY UP TO DATE ON LATEST USER RULES!" >> ~/Desktop/README_SNORTIDS.txt 
-      	  echo "OINKCODE NEEDED FOR PULLED PORK'S RULE MANAGING ABILITY! USED TO AUTOMAGICALLY DOWNLOAD REGISTERED RULE PACKAGES!" >> ~/Desktop/README_SNORTIDS.txt
+      	  echo "OINKCODE NEEDED FOR PULLED PORKS RULE MANAGING ABILITY! USED TO AUTOMAGICALLY DOWNLOAD REGISTERED RULE PACKAGES!" >> ~/Desktop/README_SNORTIDS.txt
   
   
         # INSTALL PULLED PORK FOR AUTOMATIC AND EFFICIENT SNORT RULE MANAGEMENT
@@ -1226,7 +1235,7 @@ echo
 	sudo touch /var/log/snort/barnyard2.waldo
 	sudo chown snort.snort /var/log/snort/barnyard2.waldo
         sudo echo "create database snort;" | mysql -u root -p
-	sudo echo "grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost identified by 'PASSWORDGOESHERECHANGEME!';" | mysql -u root -p 
+	sudo echo "grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost identified by 'snortpasswordherechangeme';" | mysql -u root -p 
 	sudo mkdir /usr/local/lib/snort_dynamicrules
 	cd /usr/lib/; sudo ln -s /usr/local/lib/libdnet.1.0.1 libdnet.1
         # ADDING OPENFPC FOR USAGE WITH SNORBY
@@ -1275,27 +1284,29 @@ echo
 
 	echo 'alias startsnort="snort -c /usr/local/snort/snort.conf -l /var/log/snort/"' >> ~/.bash_aliases
 
-	echo '"This is the order of commands to update Snorby the Suricata/Snort GUI: cd /usr/local/snort/snorby; sudo git pull origin master; eval sudo rake snorby:update;"' >> ~/Desktop/README_SNORBYUPDATES
+	echo "This is the order of commands to update Snorby the Suricata/Snort GUI: cd /usr/local/snort/snorby; sudo git pull origin master; eval sudo rake snorby:update;" >> ~/Desktop/README_SNORBYUPDATES
 
 	echo 'alias startfpc="sudo openfpc --action start"' >> ~/.bash_aliases
 
 
 
-        echo "/   /  /  /// 'TIGER'--or The Tiger Scripts--is a set of Bourne shell scripts, C programs and data"
+        echo "/   /  /  /// 'TIGER'--or Tiger Scripts--is a set of Bourne shell scripts, C programs and data"
         echo " -files which are used to perform a security audit of UNIX systems." 
-        echo "/   /  /  /// TIGER has one primary goal: report ways ‘root' can be compromised. "
-        echo "/   /  /  /// That said, do not run TIGER on someone else's computer without their express compliance and consent."
-	echo "/   /  /  /// Debian's TIGER incorporates new checks primarily oriented towards Debian distributions"
+        echo "/   /  /  /// TIGER has one primary goal: report ways root can be compromised. "
+        echo "/   /  /  /// That said, do not run TIGER on someone elses computer without their express compliance and consent."
+	echo "/   /  /  /// Debians TIGER incorporates new checks primarily oriented towards Debian distributions"
         echo " -including: md5sums checks of installed files, location of files not belonging to packages, check of"
         echo " -security advisories and analysis of local listening processes."
+        echo "Also feel free to look up Linux Exploit Suggester and Linuxprivchecker for additional comfort (or discomfort, depending on findings)."x
 	sleep 3
 
         #Install tiger in ubuntu 
         sudo aptitude install tiger
-        echo "To use TIGER, type into terminal: 'sudo tiger', and then give it plenty of time to run." >> ~/Desktop/OSSEC.txt
+        echo "To use TIGER, just type into terminal: 'sudo tiger', and then give it plenty of time to run through its testing process." >> ~/Desktop/OSSEC.txt
 
 	#X#######################X#
 	 ####ROOTKIT DETECTION####
+
         #X#######################X#
 	 # INSTALLING ROOTKITHUNTER -
         sudo apt-get install rkhunter
@@ -1321,21 +1332,6 @@ echo
     echo >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
   
-    # Installing LibCaca:
-    wget -P ~/tmp.xxxxx caca.zoy.org/files/libcaca/libcaca-0.99.beta19.tar.gz
-    cd ~/tmp.xxxxx
-    tar -zxvf libcaca-0.99.beta19.tar.gz 
-    cd ~/tmp.xxxxx/libcaca-0.99.beta19 && eval sudo ./configure
-    sudo make && eval sudo make install
-    cd -
-    # Toi
-    wget -P ~/tmp.xxxxx caca.zoy.org/raw-attachment/wiki/toilet/toilet-0.3.tar.gz
-    tar -zxvf ~/tmp.xxxxx/toilet-0.3.tar.gz 
-    cd ~/tmp.xxxxx/toilet-0.3 && eval sudo ./configure
-    sudo make && sudo make install
-    cd -
-  
-  
     # CLEANING UP AGAIN
     sudo rm -rf ~/tmp.xxxxx
   
@@ -1344,7 +1340,7 @@ echo
     echo    "/   /   /  /// |The script has now finished executing, and you must reboot your computer immediately."
     read -p "/   /   /  /// |Press [Enter] key to reboot now..."   
     clear
-    sleep 1
+    sleep 1 
     
     echo
     echo
