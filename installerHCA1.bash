@@ -45,7 +45,7 @@ cat << "EOF"
      /           //  /
  \_/' \         |/  /         ██░ ██  ▄████▄        █▄▄
   |    |   _,^-'/  /         ▓██░ ██▒▒██▀ ▀█       ▒████▄
-  |    , W``  (\/  /_         ▒██▀▀██░▒▓█   ▄▄      ▒██  ▀█▄
+  |    , W``  (\/  /_        ▒██▀▀██░▒▓█   ▄▄      ▒██  ▀█▄
    \,.->._    \X-=/^         ░▓█ ░██ ▒▓▓▄ ▄██▒     ░██▄▄▄▄██▄
    (  /   `-._//^`           ░▓█▒░██░▒ ▓███▀ ░ ██▓  ▓█    ▓██▒  ██▓
     `Y-.____(__}              ▒ ░░▒░▒░ ░▒ ▒  ░ ▒▓▒  ▒▓    ▓▒██░  ▒▓▒
@@ -53,7 +53,7 @@ cat << "EOF"
            ()`                 ░  ░░ ░░         ░     ░    ▒    ░
                               ░  ░  ░░ ░        ░          ░  ░  ░
                              ░          ░              ░
-                                         [ CODE WARRIORS ]
+                                        [ CODE WARRIORS ]
 EOF
 echo -en "\E[37m"
 echo "   Usage: bash $(basename $0) -l -m -t"
@@ -1261,7 +1261,7 @@ echo
 	sudo twadmin --create-polfile /etc/tripwire/twpol.txt
 	sudo tripwire --init
 	sudo sh -c 'tripwire --check | grep Filename > test_results'
-	echo "YOU CAN PICK UP THE INSTALL PROCESS AT: sudo sh -c 'tripwire --check | grep Filename > test_results', WHICH IS WHERE I'VE LEFT YOU OFF. :)" >> ~/Desktop/README_TRIPWIRE
+	echo "YOU CAN PICK UP THE INSTALL PROCESS AT: sudo sh -c 'tripwire --check | grep Filename > test_results', WHICH IS WHERE I'VE LEFT YOU OFF." >> ~/Desktop/README_TRIPWIRE
 	echo "https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps" >> ~/Desktop/README_TRIPWIRE
    
    
@@ -1275,7 +1275,7 @@ echo
 
 	echo 'alias startsnort="snort -c /usr/local/snort/snort.conf -l /var/log/snort/"' >> ~/.bash_aliases
 
-	echo '"This is the order of commands to update Snorby (SNORT GUI): cd /usr/local/snort/snorby; sudo git pull origin master; eval sudo rake snorby:update;"' >> ~/Desktop/README_SNORBYUPDATES
+	echo '"This is the order of commands to update Snorby the Suricata/Snort GUI: cd /usr/local/snort/snorby; sudo git pull origin master; eval sudo rake snorby:update;"' >> ~/Desktop/README_SNORBYUPDATES
 
 	echo 'alias startfpc="sudo openfpc --action start"' >> ~/.bash_aliases
 
