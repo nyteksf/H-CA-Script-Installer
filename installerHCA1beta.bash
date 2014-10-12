@@ -897,7 +897,7 @@ EOF
     echo "    'Yo dawg! I heard you liked OS tweaks, so I tweaked your OS so that you can tweak OS tweaks from a tweaked OS.'"
     sleep 3
 
-    read -p "/   /   /  /// |Press [Enter] key when ready to continue installing..."
+    read -p "/   /   /  /// |Press [Enter] key when ready to continue..."   
     # TO DO STILL:
     # CUSTOM H:CA GRUB BOOTSCREN BACKGROUND:
     #     https://sites.google.com/site/easylinuxtipsproject/beautifygrub
