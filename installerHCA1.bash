@@ -391,19 +391,20 @@ sleep 1
   # MAIN DIFF. IS CHROMIUM DOESNT COME PRECONFIG'D WITH MEDIA PLUGINS #
   #===================================================================#
   #
-  # Uncomment below command to Install CHROMIUM Browser:
-  # ie. Chromium is the Open Source version of Chrome Browser
-  #    sudo apt-get install chromium-browser
+  # If so desired, uncomment below to Install CHROMIUM Browser:
+  # ie. Chromium is the Open Source version of the Chrome Browser
+  #
+  #sudo apt-get install chromium-browser
   #
   # OR
   #
-  # INSTALL GOOGLE CHROME INSTEAD
-  # Google Chromw ( 64 bit )  download and install
+  # INSTALL GOOGLE CHROME INSTEAD, LIKE ME. :) 
+  # Google Chrome ( 64 bit )  download and install
   wget -P ~/tmp.xxxxx https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i ~/tmp.xxxxx/google-chrome-stable_current_amd64.deb
   
-  # Google Chrome ( 32 bit )  download and install
-  #     wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb
+  ## Google Chrome ( 32 bit )  download and install
+  #     wget https://dl.google.com/linux/direct/google-chrome-stable_current_i386.deb ## If you needed it...
   #     sudo gdebi google-chrome-stable_current_i386.deb
   
   # INSTALL FLASH FOR CHROME/CHROMIUM AND MOZILLA FIREFOX
@@ -423,8 +424,8 @@ sleep 1
   sudo apt-get install -y libreoffice
   
   
-  ## INSTALL VLC PLAYER:
-  ## IT! PLAYS! EVERYTHING!!!!!!111!1!11oneon
+  ## INSTALL VLC PLAYER: BECAUSE
+  ## IT!   PLAYS!    EVERYTHING!
   sudo apt-get install -y vlc
   
   
@@ -441,11 +442,11 @@ sleep 1
   
   
   ## INSTALL VIM TEXT EDITOR
-  ## Because not Emacs is why.
+  ## Because...not Emacs is why.
   sudo apt-get install -y vim
   ##
   ## JUST KIDDING.
-  ## Here is your EMACS as well.
+  ## Here is your EMACS as well, gais.
   sudo apt-get install -y emacs
   
   
@@ -481,9 +482,9 @@ sleep 1
   
   
   ##
-  ## LEARNYOUNODE FOR MUCH WIN! - http://NodeSchool.io
-  ## This program is the leeter version of CoderByte.com, but for Node.JS
-  sudo npm install -g learnyounode #CGHECK OUT nodeschool.io
+  ## 'LEARNYOUNODE FOR MUCH WIN!' - http://NodeSchool.io
+  ## This program is just like the leeter version of CoderByte.com, except only for Node.JS
+  sudo npm install -g learnyounode #CHECK OUT---> nodeschool.io <---
   
   
   ## INSTALL DROPBOX FOR FILE SHARING AND STORAGE
@@ -499,47 +500,39 @@ sleep 1
   echo "Alternatively, one may use dropboxd in the same folder for the GUI version, if preferred. " >> ~/Desktop/README_DROPBOX.txt
 
 
-  ###########################################################
+  #X####################################################################X#
   ## INSTALL GKSUDO:
   ## Lets you run GUI apps as root
   ## ie.    To launch any gui app with root privileges, use gksudo
-  ## eg. To launch Thunar, type-->
+  ## eg. To launch Thunar, you would do-->
   ## $ gksudo thunar
   sudo apt-get install -y gksu
-  
-  
+  ###
   ## INSTALL GUAKE
   ## Guake brings a terminal up at the push of a button
   sudo apt-get install -y guake
-  ##
+  ###
   ## PREMPTIVELY FIXING COMMON GUAKE ERRORS
   sudo mkdir /etc/gconf/schemas
   cd /etc/gconf/schemas/
   sudo ln -s /usr/share/gconf/schemas/guake.schemas
   cd -
-  ##
+  ###
   ## SET GUAKE TO RUN AFTER EACH BOOT
   sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart/
-  ##############################################################
+  #X#####################################################################X#
   
   
   ## INSTALL TMUX FOR PAIR PROGRAMMING, SHELL SPLITTING, ETC.
   sudo apt-get install -y tmux
   
   
-  ## INSTALL RAR:
-  ## Thunar file manager has the option to Create Archive in the context menu which allows you to
-  ## quickly create archive files in many different formats like 7z, tar etc.
-  ## To add the option to create rar archives, install the rar package.
-  sudo apt-get install -y rar
-  
-  
-  ## INSTALL GPARTED FOR PARTITIONING
+  ## INSTALL GPARTED FOR DRIVE PARTITIONING
   sudo apt-get install -y gparted
   
   
   ## INSTALL JAVA BROWSER PLUG-IN
-  ## WARNING: Java has lots of vulnerabilities and needs perpetual updating
+  ## WARNING: Java has lots of vulnerabilities and will require perpetual updating
   ## sudo apt-get install -y icedtea-plugin
   
   
@@ -568,7 +561,7 @@ sleep 1
   ##
   ## LEARNYOUNODE FOR MUCH WIN! - http://NodeSchool.io
   ## This program is the leeter version of CoderByte.com, but for Node.JS
-  sudo npm install -g learnyounode #CGHECK OUT nodeschool.io
+  sudo npm install -g learnyounode #CHECK OUT nodeschool.io
   
   
   ## INSTALL F.LUX for LINUX:
@@ -591,7 +584,8 @@ sleep 1
   ## INSTALL ZSH
   sudo apt-get install -y zsh
   ##
-  ## INSTALL OH-MY-ZSH
+  ## INSTALL OH-MY-ZSH:  A community-driven framework for managing your zsh configuration. 
+  ## Includes 120+ optional plugins (rails, git, OSX, hub, capistrano, brew, ant...) 
   wget –no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh 
   
   
@@ -622,11 +616,13 @@ sleep 1
   sudo apt-get install -f
   
   
-  ## INSTALLING ALIEN TO CONVERT .RPM and etc Distro pkgs to UBUNTU COMPATIBLE FORMATS 
+  ## INSTALLING ALIEN TO CONVERT .RPM and etc Distro pkgs to UBUNTU COMPATIBLE FORMATS
+  ## ...BECAUSE YOU CAN NOW. WELL, MAYBE. OR YOU CAN AT LEAST TRY WHEN IN A PINCH. 
+  ## GOOD LUCK. :)  
   sudo apt-get install -y alien
   
   
-  ## CLEANING UP OUR MESS AND PUTTING AWAY OUR TOYS:
+  ## CLEANING UP OUR MESS AND PUTTING AWAY ALL OF OUR TOYS:
   ## Deleting our install folder et al
   sudo rm -rf ~/tmp.xxxxx
   
@@ -790,8 +786,8 @@ cat << "EOF"
 :::::::::::::::::::::::::::::/+oooo+///+osso+/::::::::::::::::::::::::::::::::oddh::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::/osyyyyyyyyyyyyyyyy//+oooooo+ooooooo+/::+ooooooo/::sMMN:::/+oooooo/::::::::::::::::::::::::::
 ::::::::::::::::::::::::::/+++++++++++++++++++hNMMMMMMMymMMMMMMMMd/hMMMMMMMMm+sMMN:+dNMMMMMMMo::::::::::::::::::::::::::
-::::::::::::::::::::::::::osssssssssssssssss/mMMd/:/mMMymMMs:/sMMMdhMMh::+NMMNsMMNoNMMs:/hMMh:::::::::::::::::::::::::::
-::::::::::::::::::::::::::shhhhhhhhH:CAhhhhh+MMMd/:/mMMymMMs::/mMMdhMMh::/hMMNsMMNyMMMs+yhhs::::::::::::::::::::::::::::
+::::::::::::::::::::::::::osssssH:CAssssssss/mMMd/:/mMMymMMs:/sMMMdhMMh::+NMMNsMMNoNMMs:/hMMh:::::::::::::::::::::::::::
+::::::::::::::::::::::::::shhhhhhhhhhhhhhhhh+MMMd/:/mMMymMMs::/mMMdhMMh::/hMMNsMMNyMMMs+yhhs::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::oyyyyyyyyyyyyyyyyyoomMMNmymMMymMMydmNMMd/hMMhhmNMMm+sMMN:yNMMNmmmmmo::::::::::::::::::::::::::
 :::::::::::::::::::::::::::syyyyyyyyyyyyyyyyyso+sss+oss+mMMsssso/::hMMhosss+::+sss:::+sssssss/::::::::::::::::::::::::::
 :::::::::::::::::::::::::::+hhhhhhhhhhhhhhhhhhs:::::::::dmmo:::::::ymmy:::::::::::::::::::::::::::::::::::::::::::::::::
@@ -817,9 +813,8 @@ echo "/   /  /  /// Start by ensuring that XCode is downloaded.It is available f
 echo "/   /  /  /// Download Link:  https://developer.apple.com/xcode/downloads/"
 echo "/   /  /  /// Help for you: https://guide.macports.org/chunked/installing.xcode.html"
 echo
-echo
-echo "/   /  /  /// The script will pause until you have XCode installed, and then we will resume."
-read -p  "/   /  /  /// Press [Enter] only when ready, and XCode is successfully installed." -n 1 
+echo "/   /  /  /// This script will pause until you have XCode installed, and then you may continue."
+read -p  "/   /  /  /// Press [Enter] only when ready, and XCode has been successfully installed." -n 1 
 
 echo 
 echo
@@ -864,20 +859,20 @@ cat << "EOF"
                   `-:+o+oyo+shyhsys.                                                     
               .+sssso++++++++syhs-  `://:`                                                      
             -syo+++++sy+++yso+++oy+oys++oh- 						        
-           :h++/+/+sdhy++yo-ys++++dmo/++od-                          `:/+:`		         ._________________.
-           mo/+/+/++yh/+om:`sy/+//hdmyydy-   `-::. `-::-` `-:::.   -yyoo+od-::-`                 |.---------------.|    
-          `sh++++++yd+++hssys+++++hyoo+oh. :syoooyyysoosyysooooys` -d+/+/+hsoosyo`               ||               ||
-       -+oyyyyhysosmo+/sh/+++++++hmo+/++d. oh+/++++///++++++++++d. +y+++/+o++/++yo               ||   -._ .-.     ||
-     /yso++++od-`:ys/++dds++/+osyod+/++ss  sy//++yhs++++oyy+++++d``h+++/ohyh++/+oy`              ||   -._| | |    ||
-   `sy++++++++yosyo++/sy.:+++o+:`sy//++d- `d++/+ohhs+/++hsd/+++yo /h++/++ys+++++ys	         ||   -._|"|"|    ||
-   :h/++++++++++++++/od-        `mo++++hooyy++++hsd++++syho+/++ysods/++++/+///+od`               ||   -._|.-.|    ||
-   +y+++++++++++++++od:         .do/++/+ohN++/+odsy/+++h/do+++++shd+/++o++++++sy.	         ||_______________||
-   .ho+//++++++++++sy-           :ssooss+/msssso-hyssso: -ssoossods++/+/,                        /.-.-.-.-.-.-.-.-.\
-    .sso++//+++ooss:`              `.```  .```   ..```     `..``-d+++/ss``..`                   /.-.-.-.-.-.-.-.-.-.\
-      .:+ssssso+:.                                              ys//++d-	               /.-.-.-.-.-.-.-.-.-.-.\     
-          ```     ./+ooo+::...`  `.::-                         `myosss/                       /______/__________\___o_\
-                 oyo+++++ooooys`/ssosh                          -.```                         \_______________________/
-                -d+++++yddo/+hyys++oh-                             ``..``
+           :h++/+/+sdhy++yo-ys++++dmo/++od-                          `:/+:`		        
+           mo/+/+/++yh/+om:`sy/+//hdmyydy-   `-::. `-::-` `-:::.   -yyoo+od-::-`                 ._________________.    
+          `sh++++++yd+++hssys+++++hyoo+oh. :syoooyyysoosyysooooys` -d+/+/+hsoosyo`               |.---------------.|
+       -+oyyyyhysosmo+/sh/+++++++hmo+/++d. oh+/++++///++++++++++d. +y+++/+o++/++yo               ||               ||
+     /yso++++od-`:ys/++dds++/+osyod+/++ss  sy//++yhs++++oyy+++++d``h+++/ohyh++/+oy`              ||   -._ .-.     ||
+   `sy++++++++yosyo++/sy.:+++o+:`sy//++d- `d++/+ohhs+/++hsd/+++yo /h++/++ys+++++ys	         ||   -._| | |    ||
+   :h/++++++++++++++/od-        `mo++++hooyy++++hsd++++syho+/++ysods/++++/+///+od`               ||   -._|"|"|    ||
+   +y+++++++++++++++od:         .do/++/+ohN++/+odsy/+++h/do+++++shd+/++o++++++sy.	         ||   -._|.-.|    ||
+   .ho+//++++++++++sy-           :ssooss+/msssso-hyssso: -ssoossods++/+/,                        ||_______________||
+    .sso++//+++ooss:`              `.```  .```   ..```     `..``-d+++/ss``..`                    /.-.-.-.-.-.-.-.-.\
+      .:+ssssso+:.                                              ys//++d-	                /.-.-.-.-.-.-.-.-.-.\    
+          ```     ./+ooo+::...`  `.::-                         `myosss/                        /.-.-.-.-.-.-.-.-.-.-.\
+                 oyo+++++ooooys`/ssosh                          -.```                         /______/__________\___o_\
+                -d+++++yddo/+hyys++oh-                             ``..``                     \_______________________/
                 `hs+++oyms+o+hhoo++h:.:+++-:+++.      `.--.`     -osssoss:
               ./syyshyods+yh++oho+sh`hso+sNs++y+    .ossoosso- .syo++++++y+
              /yo++++doys++Ny++dh+/ohsdo/+dNo++h-   /yo++++/+oyyho+++++/+/sh
@@ -922,7 +917,7 @@ EOF
     ## SHORTENS BATTERY LIFE SLIGHTLY ONLY WHEN LAPTOP IS NOT PLUGGED IN BUT SPEEDS
     ## UP INTERNET
     echo -en "\E[31m"
-    echo "/   /  /  /// Checking to see if you are using wlan0 to access your primary internet connection."
+    echo "/   /  /  /// Checking to see if you are currently using wlan0 to access your primary internet connection."
      
     echo -en "\E[37m"
     iwconfig
@@ -930,7 +925,7 @@ EOF
     echo -en "\E[31m"
     echo    
     echo
-    read -p "/   /  /  /// Was your primary internet connection on wlan0 after all, then? Press [Y/n] to continue" -n 1 -r
+    read -p "/   /  /  /// Was your primary internet connection 'wlan0' after all, then? Press [Y/n] to continue" -n 1 -r
     echo
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
@@ -1005,6 +1000,11 @@ EOF
 	sudo mv -f ~/tmp.xxxxx/ufw.conf /etc/ufw/
    fi
     
+    echo "mkcd () {" >> ~/.bashrc 
+    echo 'mkdir "$1"' >> ~/.bashrc
+    echo 'cd "$1"' >> ~/.bashrc
+    echo "}" >> ~/.bashrc
+    echo "Alias 'mkcd' added to grant ability --> simultaneously name, make, and cd into new directory; a time saver." >> ~/Desktop/README_ALIASES
    
     ## ADDING SURICATA ("THE SNORT REPLACER")
     sudo aptitude install suricata
@@ -1016,11 +1016,14 @@ EOF
     echo " - http://www.linux.org/threads/suricata-the-snort-replacer-part-2-configure-test.4348/"  > ~/Desktop/README_SURICATA
     echo " - http://www.cyborgworkshop.org/2014/01/26/install-suricata-oinkmaster-and-emerging-threats/"  > ~/Desktop/README_SURICATA
 
+    sudo touch ~/.bash_aliases ## Just in case; we prepare. 
+    sudo echo "alias update='sudo apt-get update && apt-get upgrade && apt-get autoclean && apt-get autoremove'" >> ~/.bash_aliases
+
     ## ADD A CRON JOB TO WIPE THE THUMBNAIL FOLDER OF ACCUMULATING IMAGE FILES:
     ## PERFORMED TWICE (BIANNUAL FREQ.)
     echo -en "\E[31m"
     echo
-    sudo touch ~/.bash_aliases
+
     echo "/   /  /  /// We are setting up a Cronjob to wipe the image thumbnail folder at a biyearly interval."
     ##
     echo -en  "\E[37m"
@@ -1054,6 +1057,7 @@ EOF
                  echo "Done!"
         fi
 
+    
     ## ADDING CRON JOB TO UPDATE TRIPWIRE
     echo "/   /  /  /// We're setting up a Cron job to update Tripwire weekly"
     ##   
@@ -1077,8 +1081,19 @@ EOF
 
         fi
 
+    ## ADDING CRON JOB TO UPDATE YOUR OS AUTOMAGICALLY
+    echo "/   /  /  /// Next we'll be setting a Cron job to keep your OS updated at bi-weekly intervals. ('Safety first!' ;)"
+    
+
+    crontab -l > file.txt; echo '* 5 14 * * update' >> file.txt; crontab file.txt
+                rm -rf file.txt
+    crontab -l > file.txt; echo '* 5 28 * * update' >> file.txt; crontab file.txt
+                rm -rf file.txt
+
+
+
 echo >> ~/Desktop/OSTWEAKS.txt
-echo "SUDO CRONTAB -e TO ADD A CRONTAB AS ROOT. NEXT, YOU WILL COPY PASTA THE FOLLOWING LINES THEREINTO:" >> ~/Desktop/OSTWEAKS.txt
+echo "SUDO CRONTAB -e TO ADD A CRONTAB AS ROOT BY YOURSELF. NEXT, YOU WILL COPY PASTA THE FOLLOWING LINES THEREINTO:" >> ~/Desktop/OSTWEAKS.txt
 echo "wARNING: YOU WILL HAVE TO ADJUST THE EMAIL ADDRESS TO <YOURUSERNAME>@LOCALHOST, HOWEVER!" >> ~/Desktop/OSTWEAKS.txt
 echo "#TO UPDATE TRIPWIRE" >> ~/Desktop/OSTWEAKS.txt
 echo "@weekly tripwire -m p /etc/tripwire/twpol.txt" >> ~/Desktop/OSTWEAKS.txt
@@ -1094,7 +1109,7 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
 
     ## Download and run script for battery tweaks in Ubuntu 14.04/13.10/13.04/12.10/12.04/10.04/Linux Mint 16/15/14/13/and other related Ubuntu derivatives open terminal and enter following commands:
     echo
-    read -p "/   /  /  /// Do you want to install battery and power management tweaks? Uninstallation help is provided. Press [Y/n] to continue." -n 1 -r
+    read -p "/   /  /  /// Do you want to install battery and power management tweaks? Uninstallation help will be provided if so. Press [Y/n] to continue." -n 1 -r
     echo
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
@@ -1123,17 +1138,6 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo "Added ~/.gtkrc-2.0 with commands to speed up the user interface." >> ~/Desktop/README_OSTWEAKS.txt
     
     
-    ## And then we will cause TMUX to run whenever a new bash shell opens:
-    echo >> ~/.bashrc
-    echo "# OPEN TMUX WITH TERMINAL" >> ~/.bashrc      
-    echo "if [[ ! $TERM =~ screen ]]; then" >> ~/.bashrc      
-    echo "	exec tmux" >> ~/.bashrc      
-    echo "fi" >> ~/.bashrc      
-
-    
-    echo "Added command to .bashrc which starts TMUX by default on shell launch." >> ~/Desktop/README_OSTWEAKS.txt
-    
-    
     ## ADDING A COMMAND TO RUN xflux daemon AT STARTUP
     ##   NO MORE BEING WIDE AWAKE AT 2AM DUE TO BRIGHT MONITORS MIMICKING SUNLIGHT
     mv ~/xflux ~/.xflux/xflux
@@ -1144,11 +1148,13 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     cd -
     
     ## ADDING AN ALIAS FOR LOCKING OUR SESSION QUICKLY
-    echo "alias lockdown = 'xflock4'" >> ~/.bash_aliases
+    echo "alias lockdown='xflock4'" >> ~/.bash_aliases
+    echo >> ~/.bash_aliases
+    echo "alias l='xflock4'" >> ~/.bash_aliases
     echo >> ~/.bash_aliases
     
     ##
-    echo "- An alias to quickly lock your xsession: 'lockscreen'" >> ~/Desktop/README_NEWALIASES.txt
+    echo "- Aliases to quickly lock your xsession: 'lockscreen' and 'l' added" >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
     
     
