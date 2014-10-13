@@ -928,13 +928,6 @@ EOF
     echo >> ~/Desktop/README_NEWALIASES.txt
     echo "-xkill typed into a terminal will provide you a targeting cursor with which to kill a frozen app via mouse click event. Rarely used, but can be useful to know..." >> ~/Desktop/README_NEWALIASES.txt
     
-    ## INSTALL TOR - SOCKS5 PROXY - PORT 9050 (DEFAULT)
-    ## READ AND MODIFY /etc/tor/torrc AS DESIRED. 
-    ## I suggest something like allowing 192.168.0.1/24 (or whatever for CIDR), and disallowing *. 
-    ## The file tries one line at a time, from the top down, so you will either be in the block and allowed, or denied access in this way.
-    ## Bind to a port on a reserved static IP within your home network to create a daemonized service.
-    ## Port forwarding allows you to use as a remote service, and be sure to allow your new IP as well, of course.
-    apt-get install tor -y
 
     ## SPEED UP INTERNET CONNECTION BY TURNING OFF WIRELESS NIC POWER MANAGEMENT
     ## SHORTENS BATTERY LIFE SLIGHTLY ONLY WHEN LAPTOP IS NOT PLUGGED IN BUT SPEEDS
