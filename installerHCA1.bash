@@ -234,10 +234,10 @@ sleep 1
   echo "Installing and configuring Git..."
   sleep 2   
   
-  # INSTALL GIT
+  ## INSTALL GIT
   sudo apt-get install -y git
-  #
-  # CONFIG GIT
+  ##
+  ## CONFIG GIT
   
   echo "'Git'...successfully installed."
   echo
@@ -854,7 +854,132 @@ brew install git
 ## CONFIGURING GIT
 
 
-pbcopy < ~/.ssh/id_rsa.pub
+  #pbcopy < ~/.ssh/id_rsa.pub
+
+  ## TIME TO CONFIG GIT
+  
+  echo "'Git'...successfully installed."
+  echo
+  echo -n "Configuring Git..."
+  sleep 1
+  echo "Now!"
+  echo
+  echo
+  echo "[[GitHub]---[H:CA Script v1 beta]]"
+  echo
+  echo
+  echo "      .--------. "
+  echo "     / .------. \ "
+  echo "    / /        \ \ "
+  echo "    | |        | | "
+  echo "   _| |________| |_ "
+  echo " .' |_|        |_| '. "
+  echo " '._____ ____ _____.' "
+  echo " |     .'____'.     | "
+  echo " '.__.'.'    '.'.__.' "
+  echo " '.__  |GitHub|  __.' "
+  echo " |   '.'.____.'.'   | "
+  echo " '.____'.____.'____.'[H:CA Script v1 beta] "
+  echo " '.________________.' "
+  echo
+  echo
+  echo "To start with, we must configure Git for usage before doing anything else." 
+  echo "It is true that Git sits at the very heart of Github, after all; a place you will soon become familiar with." 
+ 
+    echo -en "\E[31m"
+  read -p "/   /   /  /// Please enter your first name: "
+  git config --global user.name \"$REPLY\"
+  
+  echo -en "\E[31m"
+  read -p "/   /   /  /// Carefully enter your email address: " 
+  git config --global user.email \"$REPLY\"
+  echo
+  sleep 2
+  
+  
+  read -p "/   /   /  /// Were you able to enter in the two previous two commands successfully? [Y/n] " -n 1 -r
+        if [[ $REPLY =~ ^[Yy]$ ]]
+        then
+            ## RUN THE COMMANDS
+            clear
+            sleep 1
+
+            echo -en "\E[31m"
+            echo
+            echo
+            echo  "/   /   /  /// We're now checking to see if you have existing SSH keys. Look below for the output."
+            echo
+            echo
+
+            echo -en "\E[37m"
+            ls -al ~/.ssh
+            echo 
+            echo
+  read -p "/   /   /  /// Did you find any *.pub files in directory '~/.ssh'? Enter [Y/n] to continue." -n 1
+	          if [[ ! $REPLY =~ ^[Yy]$ ]]
+                  then
+                  read -p "/   /   /  /// We're making you a new SSH key. Please prepare to carefully type your Email Address."
+                  ssh-keygen -t rsa -C \"$REPLY\"
+		  eval "$(ssh-agent -s)"
+		  ssh-add ~/.ssh/id_rsa
+            fi
+           ##
+           ## ADD YOUR SSH KEY TO GITHUB ACCT. 
+            clear
+            echo
+            echo
+            echo "/   /   /  /// Your first assignment, having now just configured Git, is to go and register an account over at GitHub.com." 
+            echo "/   /   /  /// The script will wait. Load your browser, do that, and come back when finished."
+            echo
+            read -p "/   /   /  /// Is your GitHub Account all set up and logged in? Press [Y/n] to continue." -n 1
+            echo
+	    
+	    pbcopy < ~/.ssh/id_rsa.pub
+ 	    # Copies the contents of the id_rsa.pub file to your clipboard. You'll need to paste it to the website soon after.
+            echo
+            echo
+            echo
+            echo -en "\E[31m"
+            echo > ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo "pbcopy has automagically copied your SSH Key to the clipboard in order that it might then be pasted directly into your GitHub account." >> ~/Desktop/README_GITHUB.txt
+            echo "Alternatively, using your favorite text editor, you can open the ~/.ssh/id_rsa.pub file to thereby manually copy and paste the contents of said file." >> ~/Desktop/README_GI$
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo "Now that you have the key copied either way, it's time to add it to your GitHub:" >> ~/Desktop/README_GITHUB.txt      
+            echo >> ~/Desktop/README_GITHUB.txt
+      	    echo "(See: https://help.github.com/articles/generating-ssh-keys for accompanying images if such an aide is desired.)" >> ~/Desktop/README_GITHUB.txt
+            echo "#1: Load GitHub.com again. In the user bar in the top-right corner of any page, find and click Account settings." >> ~/Desktop/README_GITHUB.txt
+            echo "#2: Click 'SSH Keys' in the left sidebar. " >> ~/Desktop/README_GITHUB.txt
+            echo "#3: Click 'Add SSH key'." >> ~/Desktop/README_GITHUB.txt
+            echo "#4: In the Title field, add a descriptive label for the new key." >> ~/Desktop/README_GITHUB.txt
+            echo "For example, if you're using a personal Mac, you might call this key 'Personal MacBook Air'." >> ~/Desktop/README_GITHUB.txt
+            echo "#5: Paste your key into the 'Key' field with Ctrl+V." >> ~/Desktop/README_GITHUB.txt
+            echo "#6: Click 'Add key'." >> ~/Desktop/README_GITHUB.txt
+            echo "#7: Confirm the action by entering your GitHub password." >> ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo "Finally: Test everything out!" >> ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo "To make sure everything is working, you'll now try SSHing to GitHub." >> ~/Desktop/README_GITHUB.txt
+            echo "When you do this, you will be asked to authenticate this action using your password," >> ~/Desktop/README_GITHUB.txt 
+            echo "which was the passphrase you created earlier." >> ~/Desktop/README_GITHUB.txt
+            echo  >> ~/Desktop/README_GITHUB.txt
+            echo "Open up your Terminal and type:" >> ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo "ssh -T git@github.com" >> ~/Desktop/README_GITHUB.txt
+            echo >> ~/Desktop/README_GITHUB.txt
+            echo "Did trying to connect to GitHub via SSH give you an error? Let's hope not!" >> ~/Desktop/README_GITHUB.txt
+            echo
+            echo "README file for GITHUB has been generated on ~/Desktop..."
+            echo
+            echo "/   /   /  /// Pause momentarily to load your Desktop screen. Find the GitHub README, and return here when finished with the install instructions."
+            read -p "/   /  / /// Press any key to continue" -n 1
+
+            sleep 2
+            clear 
+ 
+       fi
 
 
 
