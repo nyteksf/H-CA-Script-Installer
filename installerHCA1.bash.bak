@@ -5,7 +5,7 @@
 # [FOR UBUNTU, DEBIAN, AND THEIR DERIVATIVE DISTROS]							 #
 # [ALSO  WITH  INSTALL  OPTION  ADDED  FOR  OSX]							 #
 #													 #
-# [TESTED ON XUBUNTU 14.04 (Trusty) - AMD64]								 #
+# [TESTED ON XUBUNTU 14.04 (Trusty) - i686]								 #
 #													 #
 #======================================================================================================= #
 # USAGE INSTRUCTIONS:											 #
@@ -65,8 +65,8 @@ echo "         ex. [For Linux]: bash $(basename $0) -l -t"
 echo "             [For OSX]:   bash $(basename $0) -m"
 echo
 
-## Using 'getopts' to make the multi-choice-magic happen
-##
+# Using 'getopts' to make the multi-choice-magic happen
+#
 lflag=
 mflag=
 tflag=
@@ -96,8 +96,8 @@ then
   printf "\nOption -l specified"
   sleep 2
   
-  ## CLEAR THE CONSOLE BEFORE CONTINUING EXECUTION:
-  ## TABULA RASA:
+  # CLEAR THE CONSOLE BEFORE CONTINUING EXECUTION:
+  # TABULA RASA:
   clear
   
   
@@ -142,13 +142,14 @@ sleep 3
 clear
 sleep 1
 
-  ## SET FOREGROUND TO RED
+  # SET FOREGROUND TO RED
   echo -en "\E[31m"
   echo
   echo
   echo
   echo
-  echo '/    /   /  /  //  ///  Now  Launching  H:CA'
+  echo
+  echo '/    /   /  /  //  /// Launching  The  H:CA'
   echo '/    /   /  /  //  /// ////  ,------------. '
   echo '/    /   /  /  //  /// ////  | |        | | '
   echo '/    /   /  /  //  /// ////  | |        | | '
@@ -160,7 +161,7 @@ sleep 1
   echo '/    /   /  /  //  /// Linux Install Script'
   sleep 1
   
-  ## CHECK FOR INTERNET CONNECTION:
+  # CHECK FOR INTERNET CONNECTION:
   echo "/   /   /  /// Please check to ensure that your internet connection is currently established."
   sleep 3
   read -p "/   /   /  /// Are you ready to continue? [Y/n] " -n 1 -r
@@ -176,9 +177,10 @@ sleep 1
   fi
   
   
-  ## EYE CANDY...FOR THE HELL OF IT:
-  ## NO GARNISH? STFU KTHX GTFO BAI.
+  # EYE CANDY FOR THE HELL OF IT:
+  # STFU PLZ. KTHX GTFO BAI.
   declare -a Spinner
+  
   Spinner=(/ - \\ \| / - \\ \| )
   Spinnerpos=0
   
@@ -205,11 +207,10 @@ sleep 1
   clear
   
   
-  ## PREPARING TO SERVE UP THE 'MEAT AND POTATOES' PORTION OF OUR SCRIPT:
+  # PREPARING TO SERVE THE MEAT AND POTATOES PORTION OF OUR SCRIPT:
   sleep 3
-  echo -n "Shell script..." 
-  sleep 1
-  echo "ready and initialized!"
+  echo "Shell script ready and initialized!"
+  echo
   sleep 1
   echo "Script executing!"
   echo "Hold on tightly!"
@@ -217,19 +218,17 @@ sleep 1
   echo
   
   
-  ## FOR THE DURATION OF THIS INSTALL PROCESS
-  ## CREATE A DIR TO STORE ALL OF OUR INSTALL FILES
+  # FOR THE DURATION OF THIS INSTALL PROCESS
+  # CREATE A DIR TO STORE ALL OF OUR INSTALL FILES
   mkdir ~/tmp.xxxxx
   
-  ## UPDATE YOUR SYSTEM FIRST
+  # UPDATE YOUR SYSTEM
   sudo apt-get install -f
   sudo apt-get -y update
   sudo apt-get -y upgrade
-  #sudo apt-get -y distupgrade
-  sudo apt-get autoclean
-  sudo apt-get autoremove
   
-  clear
+  
+   clear
   echo -en "\E[31m"
   echo "Installing and configuring Git..."
   sleep 2   
@@ -239,11 +238,11 @@ sleep 1
   #
   # CONFIG GIT
   
-  echo "'Git'...successfully installed."
+  echo "'Git': successfully installed."
   echo
   echo -n "Configuring Git..."
-  sleep 1
   echo "Now!"
+  echo
   echo
   echo
   echo "[[GitHub]---[H:CA Script v1 beta]]"
@@ -264,8 +263,8 @@ sleep 1
   echo " '.________________.' "
   echo
   echo
-  echo "To start with, we must configure Git for usage before doing anything else." 
-  echo "It is true that Git sits at the very heart of Github, after all; a place you will soon become familiar with." 
+  echo "To start with, we must config Git for usage before doing anything else." 
+  echo "It is true that Git sits at the very heart of Github, after all." 
  
     echo -en "\E[31m"
   read -p "/   /   /  /// Enter in your first name: "
@@ -281,7 +280,7 @@ sleep 1
   read -p "/   /   /  /// Were you able to enter in the two previous two commands successfully? [Y/n] " -n 1 -r
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
-            ## RUN THE COMMANDS
+            # run the commands:
             clear
             sleep 1
 
@@ -296,10 +295,10 @@ sleep 1
             ls -al ~/.ssh
             echo 
             echo
-  read -p "/   /   /  /// Did you find any *.pub files in directory '~/.ssh'? Enter [Y/n] to continue." -n 1
+  read -p "/   /   /  /// Did you find anything in directory '~/.ssh'? Enter [Y/n]." -n 1
 	          if [[ ! $REPLY =~ ^[Yy]$ ]]
                   then
-                  read -p "/   /   /  /// We're making you a new SSH key. Please prepare to carefully type your Email Address."
+                  read -p "/   /   /  /// We're making you an SSH key. Carefully enter your Email Address."
                   ssh-keygen -t rsa -C \"$REPLY\"
             fi
            ##
@@ -314,21 +313,21 @@ sleep 1
             echo
 	    
 	    sudo apt-get install xclip
-# Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (eg, like 'yum')
+# Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`)
 
 	    xclip -sel clip < ~/.ssh/id_rsa.pub
-# Copies the contents of the id_rsa.pub file to your clipboard. You'll need to paste it to the website soon after.
+# Copies the contents of the id_rsa.pub file to your clipboard
             echo
             echo
             echo
             echo -en "\E[31m"
             echo > ~/Desktop/README_GITHUB.txt
             echo >> ~/Desktop/README_GITHUB.txt
-            echo "XClip has automagically coping your SSH Key to the clipboard so that it can be pasted directly into your GitHub account." >> ~/Desktop/README_GITHUB.txt
-            echo "Alternatively, using your favorite text editor, you can open the ~/.ssh/id_rsa.pub file to thereby manually copy and paste the contents of said file." >> ~/Desktop/README_GI$
+            echo "pbcopy has automagically cut your SSH Key to the clipboard, so that it can be pasted into your GitHub account." >> ~/Desktop/README_GITHUB.txt
+            echo "Alternatively, using your favorite text editor, you can open the ~/.ssh/id_rsa.pub file to thereby copy and paste the contents of said file over manually." >> ~/Desktop/README_GI$
             echo >> ~/Desktop/README_GITHUB.txt
             echo >> ~/Desktop/README_GITHUB.txt
-            echo "Now that you have the key copied either way, it's time to add it to your GitHub:" >> ~/Desktop/README_GITHUB.txt      
+            echo "Now that you have the key copied either way, it's time to add it into GitHub:" >> ~/Desktop/README_GITHUB.txt      
             echo >> ~/Desktop/README_GITHUB.txt
       	    echo "(See: https://help.github.com/articles/generating-ssh-keys for accompanying images if such an aide is desired.)" >> ~/Desktop/README_GITHUB.txt
             echo "#1: Load GitHub.com again. In the user bar in the top-right corner of any page, find and click Account settings." >> ~/Desktop/README_GITHUB.txt
@@ -364,25 +363,22 @@ sleep 1
        fi
 
 
-  ## MAKE SURE HARDWARE WORKS AND INSTALL ANY MISSING DRIVERS
+  # MAKE SURE HARDWARE WORKS AND INSTALL ANY MISSING DRIVERS
   sudo apt-get install -y linux-firmware-nonfree
   
-  ## INSTALL CURL FOR EFFICIENT DOWNLOADS
-  ## You will find yourself using this one sooner or later--trust me.
+  # INSTALL CURL FOR EFFICIENT DOWNLOADS
+  # You will find yourself using this one sooner or later--trust me.
   sudo apt-get install -y curl
   
-  ## INSTALL FILE-ROLLER, UNRAR, ETC.
-  sudo apt-get install unrar unace rar unrar p7zip zip unzip p7zip-full p7zip-rar file-roller -y
-
-  ## INSTALL BUILD TOOLS:
-  ## These contain important libraries for programmers.
+  # INSTALL BUILD TOOLS:
+  # These contain important libraries for programmers.
   sudo apt-get install -y build-essential
   sudo apt-get install -y ruby
   
-  ## INSTALL SYNAPTIC AND GDEBI:
-  ## Synaptic is often considered generally faster and easier than Ubuntu Software Center.
-  ## Gdebi is very useful when installing .deb files manually. It automatically pulls in
-  ## the dependencies from the given repos.
+  # INSTALL SYNAPTIC AND GDEBI:
+  # Synaptic is often considered generally faster and easier than Ubuntu Software Center.
+  # Gdebi is very useful when installing .deb files manually. It automatically pulls in
+  # the dependencies from the given repos.
   sudo apt-get install -y synaptic
   sudo apt-get install -y gdebi-core
   
@@ -411,87 +407,87 @@ sleep 1
   sudo apt-get install -y pepperflashplugin-nonfree
   #=====================================================================#
   
-  ## INSTALL GNOME SYSTEM MONITOR:
-  ## The gnome system monitor is a simple tool that shows processes, resource usage (cpu, memory,
-  ## network) and disk usage
-  ## better than the default Task manager tool that comes with xfce.
+  # INSTALL GNOME SYSTEM MONITOR:
+  # The gnome system monitor is a simple tool that shows processes, resource usage (cpu, memory,
+  # network) and disk usage
+  # better than the default Task manager tool that comes with xfce.
   sudo apt-get install -y gnome-system-monitor
   
   
-  ## INSTALL AN OFFICE SUITE LIKE MSWORD:
-  ## Better than Xubuntu's defaults
+  # INSTALL AN OFFICE SUITE LIKE MSWORD:
+  # Better than Xubuntu's defaults
   sudo apt-get install -y libreoffice
   
   
-  ## INSTALL VLC PLAYER:
-  ## IT! PLAYS! EVERYTHING!!!!!!111!1!11oneon
+  # INSTALL VLC PLAYER:
+  # IT! PLAYS! EVERYTHING!!!!!!111!1!11oneon
   sudo apt-get install -y vlc
   
   
-  ## INSTALL MULTIMEDIA CODECS:
-  ## Is additional codecs from the xubuntu-restricted-extras package.
-  ## These codecs enable multimedia apps to play many more audio/video formats.
+  # INSTALL MULTIMEDIA CODECS:
+  # Is additional codecs from the xubuntu-restricted-extras package.
+  # These codecs enable multimedia apps to play many more audio/video formats.
   sudo apt-get install -y xubuntu-restricted-extras
   sudo apt-get install -y libavcodec-extra
   
   
-  ## ENABLE THE PLAYBACK OF CSS (Constant Scrambling System) ENCRYPTED DVDs
+  # ENABLE THE PLAYBACK OF CSS (Constant Scrambling System) ENCRYPTED DVDs
   sudo apt-get install -y libdvdread4
   sudo /usr/share/doc/libdvdread4/install-css.sh
   
   
-  ## INSTALL VIM TEXT EDITOR
-  ## Because not Emacs is why.
+  # INSTALL VIM TEXT EDITOR
+  # Because not Emacs is why.
   sudo apt-get install -y vim
-  ##
-  ## JUST KIDDING.
-  ## Here is your EMACS as well.
+  #
+  # JUST KIDDING.
+  # Here is your EMACS as well.
   sudo apt-get install -y emacs
   
   
-  ## ADDING USEFUL VIM PLUGIN SUPPORT:
+  # ADDING USEFUL VIM PLUGIN SUPPORT:
   sudo apt-get install -y ruby
   sudo apt-get install -f
-  ##
-  ## VIM ADD-ON MANAGER (VAM)
+  #
+  # VIM ADD-ON MANAGER (VAM)
   wget -P ~/tmp.xxxxx/ http://mirrors.kernel.org/ubuntu/pool/universe/v/vim-addon-manager/vim-addon-manager_0.5.3_all.deb 
   sudo dpkg -i ~/tmp.xxxxx/vim-addon-manager_0.5.3_all.deb
-  ##
-  ## ADDING VIM SCRIPTS (TWO DOZEN POPULAR VIM ADD-ONS FTW)
+  #
+  # ADDING VIM SCRIPTS (TWO DOZEN POPULAR VIM ADD-ONS FTW)
   wget -P ~/tmp.xxxxx/ http://ftp.us.debian.org/debian/pool/main/v/vim-scripts/vim-scripts_20130814_all.deb
   sudo dpkg -i vim-scripts_20130814_all.deb
-  ## 
-  ## INSTALL NPM, NODEJS
+  # 
+  # INSTALL NPM, NODEJS
   sudo apt-add-repository ppa:chris-lea/node.js
   sudo apt-get install -y nodejs
   sudo apt-get update -y
-  ##
+  #
   sudo apt-get install -y python-software-properties
   sudo apt-get install -y npm
-  ##
+  #
   sudo npm install -g jslint
   echo "alias jslint='~/.npm/jslint/0.6.2/package/bin/jslint.js'" >> ~/.bash_aliases
   echo >> ~/.bash_aliases
   echo "'jslint' alias added: VIM plug-in" >> ~/Desktop/README_NEWALIASES.txt
-  ##
+  #
   ##
   echo 'alias netre="sudo /etc/init.d/networking restart"' >> ~/.bash_aliases
   echo "Added alias 'netre' to reboot network quickly." >> ~/Desktop/README_NEWALIASES.txt
   ##
   
   
-  ##
-  ## LEARNYOUNODE FOR MUCH WIN! - http://NodeSchool.io
-  ## This program is the leeter version of CoderByte.com, but for Node.JS
+  #
+  # LEARNYOUNODE FOR MUCH WIN! - http://NodeSchool.io
+  # This program is the leeter version of CoderByte.com, but for Node.JS
   sudo npm install -g learnyounode #CGHECK OUT nodeschool.io
   
   
-  ## INSTALL DROPBOX FOR FILE SHARING AND STORAGE
+  # INSTALL DROPBOX FOR FILE SHARING AND STORAGE
   cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
   echo "Note: ~/.dropbox-dist/dropboxd to run DropBox, and sync with folders of your choosing in home directory." >> ~/Desktop/README_DROPBOX.txt 
   mkdir ~/Dropbox && cp ~/.dropbox-dist/dropboxd ~/Dropbox/dropboxd
   wget -P ~/Dropbox -o ~/Dropbox/dropbox.py www.dropbox.com/download?dl=packages/dropbox.py
-  ## 
+  # 
   echo "[[DROPBOX]--[H:CA Script v1 beta]]" > ~/Desktop/README_DROPBOX.txt
   echo >> ~/Desktop/README_DROPBOX.txt
   echo "Navigate to your home directory, and enter the folder named 'Dropbox' therein." >> ~/Desktop/README_DROPBOX.txt
@@ -500,56 +496,56 @@ sleep 1
 
 
   ###########################################################
-  ## INSTALL GKSUDO:
-  ## Lets you run GUI apps as root
-  ## ie.    To launch any gui app with root privileges, use gksudo
-  ## eg. To launch Thunar, type-->
-  ## $ gksudo thunar
+  # INSTALL GKSUDO:
+  # Lets you run GUI apps as root
+  # ie.    To launch any gui app with root privileges, use gksudo
+  # eg. To launch Thunar, type-->
+  # $ gksudo thunar
   sudo apt-get install -y gksu
   
   
-  ## INSTALL GUAKE
-  ## Guake brings a terminal up at the push of a button
+  # INSTALL GUAKE
+  # Guake brings a terminal up at the push of a button
   sudo apt-get install -y guake
-  ##
-  ## PREMPTIVELY FIXING COMMON GUAKE ERRORS
+  #
+  # PREMPTIVELY FIXING COMMON GUAKE ERRORS
   sudo mkdir /etc/gconf/schemas
   cd /etc/gconf/schemas/
   sudo ln -s /usr/share/gconf/schemas/guake.schemas
   cd -
-  ##
-  ## SET GUAKE TO RUN AFTER EACH BOOT
+  #
+  # SET GUAKE TO RUN AFTER EACH BOOT
   sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart/
   ##############################################################
   
   
-  ## INSTALL TMUX FOR PAIR PROGRAMMING, SHELL SPLITTING, ETC.
+  # INSTALL TMUX FOR PAIR PROGRAMMING, SHELL SPLITTING, ETC.
   sudo apt-get install -y tmux
   
   
-  ## INSTALL RAR:
-  ## Thunar file manager has the option to Create Archive in the context menu which allows you to
-  ## quickly create archive files in many different formats like 7z, tar etc.
-  ## To add the option to create rar archives, install the rar package.
+  # INSTALL RAR:
+  # Thunar file manager has the option to Create Archive in the context menu which allows you to
+  # quickly create archive files in many different formats like 7z, tar etc.
+  # To add the option to create rar archives, install the rar package.
   sudo apt-get install -y rar
   
   
-  ## INSTALL GPARTED FOR PARTITIONING
+  # INSTALL GPARTED FOR PARTITIONING
   sudo apt-get install -y gparted
   
   
-  ## INSTALL JAVA BROWSER PLUG-IN
-  ## WARNING: Java has lots of vulnerabilities and needs perpetual updating
-  ## sudo apt-get install -y icedtea-plugin
+  # INSTALL JAVA BROWSER PLUG-IN
+  # WARNING: Java has lots of vulnerabilities and needs perpetual updating
+  # sudo apt-get install -y icedtea-plugin
   
   
-  ## INSTALL sudo apt-get -y update
+  # INSTALL sudo apt-get -y update
   sudo add-apt-repository ppa:webupd8team/sublime-text-3
   sudo apt-get -y update
   sudo apt-get install -y sublime-text-installer
-  ##
-  ## SUBLIME PLUGINS
-  ## HTML5 TIDY (LINTER)
+  #
+  # SUBLIME PLUGINS
+  # HTML5 TIDY (LINTER)
   sudo apt-get install -y tidy
   
   echo "If and when you install a linter that also covers HTML5 for Sublime, you may delete the" 
@@ -562,72 +558,72 @@ sleep 1
   echo "https://sublime.wbond.net/packages/HTML-CSS-JS%20Prettify" >> ~/Desktop/README_SUBLIME_TEXT.txt
   
   
-  ## INSTALL NPM AND NODE.JS
+  # INSTALL NPM AND NODE.JS
   sudo apt-get install -y python-software-properties
   sudo apt-get install -y npm
-  ##
-  ## LEARNYOUNODE FOR MUCH WIN! - http://NodeSchool.io
-  ## This program is the leeter version of CoderByte.com, but for Node.JS
+  #
+  # LEARNYOUNODE FOR MUCH WIN! - http://NodeSchool.io
+  # This program is the leeter version of CoderByte.com, but for Node.JS
   sudo npm install -g learnyounode #CGHECK OUT nodeschool.io
   
   
-  ## INSTALL F.LUX for LINUX:
-  ## Allows for automatic dimming/brightening of screen according to time of day
-  ## This can also be done manually when the lights are turned off suddenly so as
-  ## to not strain the eyes with prolonged use.
+  # INSTALL F.LUX for LINUX:
+  # Allows for automatic dimming/brightening of screen according to time of day
+  # This can also be done manually when the lights are turned off suddenly so as
+  # to not strain the eyes with prolonged use.
   sudo add-apt-repository ppa:kilian/f.lux
   sudo apt-get -y update
   sudo apt-get install -y fluxgui
-  ##
-  ## DOWNLOAD AND INSTALL F.LUX DAEMON
+  #
+  # DOWNLOAD AND INSTALL F.LUX DAEMON
   sudo wget -x -P ~/.flux https://justgetflux.com/linux/xflux64.tgz
   sudo tar -zxvf ~/.flux/justgetflux.com/linux/xflux64.tgz && eval sudo cp ~/xflux ~/.xflux/ && eval ~/.flux/xflux -z 94124&
   
   
-  ## INSTALL MORE COMPRESSION AND DECOMPRESSION TOOLS
-  sudo apt-get install -y sharutils uudeview mpack arj cabextract
+ # INSTALL COMPRESSION AND DECOMPRESSION TOOLS
+  sudo apt-get install -y p7zip-rar p7zip-full unace unrar zip unzip sharutils uudeview mpack arj cabextract file-roller
   
   
-  ## INSTALL ZSH
+   # INSTALL ZSH
   sudo apt-get install -y zsh
-  ##
-  ## INSTALL OH-MY-ZSH
+  #
+  # INSTALL OH-MY-ZSH
   wget –no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O – | sh 
   
   
-  ## INSTALL THEME MANAGER
+  # INSTALL THEME MANAGER
   sudo add-apt-repository ppa:rebuntu16/other-stuff
   sudo apt-get update
   sudo apt-get install xfce-theme-manager
   
   
-  ## INSTALL UBTUNTU TWEAK:
-  ##   Ubuntu Tweak is an application designed to config Ubuntu easier for everyone. Use to change themes if you like it.
-  ## WORKS WITH ZEN SUITE
+  # INSTALL UBTUNTU TWEAK:
+  #   Ubuntu Tweak is an application designed to config Ubuntu easier for everyone. Use to change themes if you like it.
+  # WORKS WITH ZEN SUITE
   sudo add-apt-repository ppa:tualatrix/ppa
   sudo apt-get update
   sudo apt-get install ubuntu-tweak
   
   
-  ## INSTALL ZEN SUITE (THEMES, ET AL) 
+  # INSTALL ZEN SUITE (THEMES, ET AL) 
   sudo add-apt-repository ppa:noobslab/themes
   sudo apt-get update
   sudo apt-get install zen-suite
   
   
-  ## INSTALL XFCE THEME MANAGER
+  # INSTALL XFCE THEME MANAGER
   sudo add-apt-repository ppa:rebuntu16/other-stuff
   sudo apt-get update
   sudo apt-get install xfce-theme-manager
   sudo apt-get install -f
   
   
-  ## INSTALLING ALIEN TO CONVERT .RPM and etc Distro pkgs to UBUNTU COMPATIBLE FORMATS 
+  # INSTALLING ALIEN TO CONVERT .RPM and etc Distro pkgs to UBUNTU COMPATIBLE FORMATS 
   sudo apt-get install -y alien
   
   
-  ## CLEANING UP OUR MESS AND PUTTING AWAY OUR TOYS:
-  ## Deleting our install folder et al
+  # CLEANING UP OUR MESS AND PUTTING AWAY OUR TOYS:
+  # Deleting our install folder et al
   sudo rm -rf ~/tmp.xxxxx
   
   echo
@@ -674,7 +670,7 @@ sleep 1
     read -p "/   /   /  /// Do you need to reboot now? [Y/n] " -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
-      ## RUN THESE COMMANDS:
+      # run the commands:
       clear
       sleep 1
       
@@ -824,7 +820,7 @@ read -p  "/   /  /  /// Press [Enter] only when ready, and XCode is successfully
 echo 
 echo
 echo
-## Install Homebrew
+# Install Homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew update
 brew doctor
@@ -837,10 +833,10 @@ brew install node
 echo "[[SUBLIME3]]---[[H:CA Script v1 beta]]" >> ~/Desktop/README_SUBLIME3.txt
 echo "To install Sublime Text 3: Download and open the .dmg file, and then drag the Sublime Text 3 bundle into the Applications folder." >> ~/Desktop/README_SUBLIME3.txt
 
-## INSTALLING GIT
+# INSTALLING GIT
 brew install git
 
-## CONFIGURING GIT
+# CONFIGURING GIT
 
 
 pbcopy < ~/.ssh/id_rsa.pub
@@ -908,7 +904,7 @@ EOF
     #
     
     
-    ## CREATE README FOR USER ON DESKTOP TEACHING ABOUT NEW ALIASES
+    # CREATE README FOR USER ON DESKTOP TEACHING ABOUT NEW ALIASES
     echo "[H:CA Script v1 beta]" >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
     echo "Congratulations, and welcome. Included below, you'll find a list of shortcut commands for terminal which have been recently added to increase user functionality." >> ~/Desktop/README_NEWALIASES.txt
@@ -918,9 +914,9 @@ EOF
     echo "-xkill typed into a terminal will provide you a targeting cursor with which to kill a frozen app via mouse click event. Rarely used, but can be useful to know..." >> ~/Desktop/README_NEWALIASES.txt
     
     
-    ## SPEED UP INTERNET CONNECTION BY TURNING OFF WIRELESS NIC POWER MANAGEMENT
-    ## SHORTENS BATTERY LIFE SLIGHTLY ONLY WHEN LAPTOP IS NOT PLUGGED IN BUT SPEEDS
-    ## UP INTERNET
+    # SPEED UP INTERNET CONNECTION BY TURNING OFF WIRELESS NIC POWER MANAGEMENT
+    # SHORTENS BATTERY LIFE SLIGHTLY ONLY WHEN LAPTOP IS NOT PLUGGED IN BUT SPEEDS
+    # UP INTERNET
     echo -en "\E[31m"
     echo "/   /  /  /// Checking to see if you are using wlan0 to access your primary internet connection."
      
@@ -945,21 +941,21 @@ EOF
     cd -
     
     
-    ## ATTEMPT TO SET A MORE REASONABLE TIME PERIOD BETWEEN System File Checks:
-    ## Verify your Linux partition is indeed SDA2 before continuing.
-    ##     Changes system file check to every 100 secs instead of 30
+    # ATTEMPT TO SET A MORE REASONABLE TIME PERIOD BETWEEN System File Checks:
+    # Verify your Linux partition is indeed SDA2 before continuing.
+    #     Changes system file check to every 100 secs instead of 30
     echo -en "\E[31m"
     echo 
     echo
     echo "Ubuntu does System File Checks every 30 secs. Let's set that time to a more reasonable 100 secs per, instead."
     echo "First: is your Linux partition located at '/dev/sda2'? We'll check with you right now using the mount command."
     echo "Ask a teacher if you don't know which based on the output below, but the correct partition should be a type 'ext4', if that helps."
-    ##
+    #
     echo -en "\E[37m"
     echo
     mount | grep sda
     echo
-    ##
+    #
     echo -en "\E[31m"
     read -p "/   /  /  /// Was your Linux partition located on /dev/sda2 after all, then? Press [Y/n] to continue." -n 1 -r
     echo
@@ -982,7 +978,7 @@ EOF
     echo
     echo -en "\E[37m"
     sudo ufw status
-    ## ENABLE DEFAULT FIREWALL AT BOOTUP IF NECESSARY
+    # ENABLE DEFAULT FIREWALL AT BOOTUP IF NECESSARY
     echo -en "\E[31m"
     echo
     read -p "/   /  /  /// Was your firewall listed as being inactive? Press [Y/n] to continue." -n 1 -r
@@ -990,7 +986,7 @@ EOF
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
 
-	## Okay. Now it's active. And GUFW is the installed iptables GUI, for your information.
+	# Okay. Now it's active. And GUFW is the installed iptables GUI, for your information.
 	echo "# /etc/ufw/ufw.conf" >> ~/tmp.xxxxx/ufw.conf
 	echo  >> ~/tmp.xxxxx/ufw.conf
 	echo "# Set to yes to start on boot. If setting this remotely, be sure to add a rule" >> ~/tmp.xxxxx/ufw.conf
@@ -1006,7 +1002,7 @@ EOF
    fi
     
    
-    ## ADDING SURICATA ("THE SNORT REPLACER")
+    # ADDING SURICATA ("THE SNORT REPLACER")
     sudo aptitude install suricata
     echo "[[SURICATA]---[HCA Script v1 beta]" >> ~/Desktop/README_SURICATA
     echo >> ~/Desktop/README_SURICATA]
@@ -1016,24 +1012,24 @@ EOF
     echo " - http://www.linux.org/threads/suricata-the-snort-replacer-part-2-configure-test.4348/"  > ~/Desktop/README_SURICATA
     echo " - http://www.cyborgworkshop.org/2014/01/26/install-suricata-oinkmaster-and-emerging-threats/"  > ~/Desktop/README_SURICATA
 
-    ## ADD A CRON JOB TO WIPE THE THUMBNAIL FOLDER OF ACCUMULATING IMAGE FILES:
-    ## PERFORMED TWICE (BIANNUAL FREQ.)
+    # ADD A CRON JOB TO WIPE THE THUMBNAIL FOLDER OF ACCUMULATING IMAGE FILES:
+    # PERFORMED TWICE (BIANNUAL FREQ.)
     echo -en "\E[31m"
     echo
     sudo touch ~/.bash_aliases
     echo "/   /  /  /// We are setting up a Cronjob to wipe the image thumbnail folder at a biyearly interval."
-    ##
+    #
     echo -en  "\E[37m"
     crontab -l
-    ##
+    #
     echo -en "\E[31m"
     echo
     read -p "/   /  /  /// Do you already have a Crontab file? Look directly above to find out, and then press [Y/n] to continue." -n 1 -r
     echo
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
-                ## ADD A CRON JOB TO WIPE THE THUMBNAIL FOLDER OF ACCUMULATING IMAGE FILES:
-                ## PERFORMED TWICE (BIANNUAL FREQ.)
+                # ADD A CRON JOB TO WIPE THE THUMBNAIL FOLDER OF ACCUMULATING IMAGE FILES:
+                # PERFORMED TWICE (BIANNUAL FREQ.)
                 crontab -l > file.txt; echo "0 7 1 6 1 rm -f ~/.cache/thumbnails/normal && echo 'Image thumbnail folder has been wiped in order to free up more disk space.    [H:CA Script v1 beta'" >> file.txt; crontab -l
 
                 crontab -l > file.txt; echo "0 7 1 12 1 rm -f ~/.cache/thumbnails/normal && echo 'Image thumbnail folder has been wiped in order to free up disk space.    [H:CA Script v1 beta'"  >> file.txt; crontab file.txt
@@ -1054,12 +1050,12 @@ EOF
                  echo "Done!"
         fi
 
-    ## ADDING CRON JOB TO UPDATE TRIPWIRE
+   # ADDING CRON JOB TO UPDATE TRIPWIRE
     echo "/   /  /  /// We're setting up a Cron job to update Tripwire weekly"
-    ##   
+    #   
     echo -en  "\E[37m"
     crontab -l
-    ##   
+    #   
     echo -en "\E[31m"
     echo
     read -p "/   /  /  /// Does root already have a Crontab file? Look directly above to find out, and then press [Y/n] to continue." -n 1 -r
@@ -1092,25 +1088,25 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
 
 
 
-    ## Download and run script for battery tweaks in Ubuntu 14.04/13.10/13.04/12.10/12.04/10.04/Linux Mint 16/15/14/13/and other related Ubuntu derivatives open terminal and enter following commands:
+    # Download and run script for battery tweaks in Ubuntu 14.04/13.10/13.04/12.10/12.04/10.04/Linux Mint 16/15/14/13/and other related Ubuntu derivatives open terminal and enter following commands:
     echo
     read -p "/   /  /  /// Do you want to install battery and power management tweaks? Uninstallation help is provided. Press [Y/n] to continue." -n 1 -r
     echo
         if [[ $REPLY =~ ^[Yy]$ ]]
         then
-                 ## Download and run script for battery tweaks in Ubuntu 14.04/13.10/13.04/12.10/12.04/10.04/Linux Mint 16/15/14/13/and other related Ubuntu derivatives 
+              # Download and run script for battery tweaks in Ubuntu 14.04/13.10/13.04/12.10/12.04/10.04/Linux Mint 16/15/14/13/and other related Ubuntu derivatives 
                  cd && wget -P ~/tmp.xxxxx http://drive.noobslab.com/data/improve-battery/laptop-mode && chmod +x ~/tmp.xxxxx/laptop-mode
                  cd ~/tmp.xxxxx && ./laptop-mode
                  cd -
                  sudo bash -c "echo 60 > /proc/sys/vm/swappiness" 
-                 ##
+                 #
                  echo "Use this one command to undo/uninstall Laptop Mode and Battery Tweaks: You open terminal, then cut and paste in the following command:" > ~/Desktop/README_LAPTOPMODE
                  echo "sudo apt-get autoremove indicator-cpufreq laptop-mode-tools && FSTABFile='noatime,nodiratime,discard,errors' && sudo sed -i -e 's/$FSTABFile/errors/g' '/etc/fstab' && s$"
         fi
    
    
-    ##  SPEED UP THE XUBUNTU THE USER INTERFACE:
-    ## (FASTER LOADING OF BUTTONS, MENUES, ETC)
+    #  SPEED UP THE XUBUNTU THE USER INTERFACE:
+    # (FASTER LOADING OF BUTTONS, MENUES, ETC)
     echo "gtk-menu-popup-delay = 0" >> ~/.gtkrc-2.0
     echo "gtk-menu-popdown-delay = 0" >> ~/.gtkrc-2.0
     echo "gtk-enable-animations = 0" >> ~/.gtkrc-2.0
@@ -1118,12 +1114,12 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo "gtk-timeout-expand = 0" >> ~/.gtkrc-2.0
     echo "gtk-timeout-initial = 0" >> ~/.gtkrc-2.0
     echo "gtk-timeout-repeat = 0" >> ~/.gtkrc-2.0
-    ##
+    #
     echo >> ~/Desktop/README_OSTWEAKS.txt
     echo "Added ~/.gtkrc-2.0 with commands to speed up the user interface." >> ~/Desktop/README_OSTWEAKS.txt
     
     
-    ## And then we will cause TMUX to run whenever a new bash shell opens:
+    # And then we will cause TMUX to run whenever a new bash shell opens:
     echo >> ~/.bashrc
     echo "# OPEN TMUX WITH TERMINAL" >> ~/.bashrc      
     echo "if [[ ! $TERM =~ screen ]]; then" >> ~/.bashrc      
@@ -1134,8 +1130,8 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo "Added command to .bashrc which starts TMUX by default on shell launch." >> ~/Desktop/README_OSTWEAKS.txt
     
     
-    ## ADDING A COMMAND TO RUN xflux daemon AT STARTUP
-    ##   NO MORE BEING WIDE AWAKE AT 2AM DUE TO BRIGHT MONITORS MIMICKING SUNLIGHT
+    # ADDING A COMMAND TO RUN xflux daemon AT STARTUP
+    #   NO MORE BEING WIDE AWAKE AT 2AM DUE TO BRIGHT MONITORS MIMICKING SUNLIGHT
     mv ~/xflux ~/.xflux/xflux
     echo 'alias fluxon="~/.flux/xflux -z 94124"' >> ~/.bash_aliases
     touch ~/Desktop/README_F.LUX
@@ -1143,11 +1139,11 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo "OR SEE: https://justgetflux.com/" >> ~/Desktop/README_F.LUX
     cd -
     
-    ## ADDING AN ALIAS FOR LOCKING OUR SESSION QUICKLY
+    # ADDING AN ALIAS FOR LOCKING OUR SESSION QUICKLY
     echo "alias lockdown = 'xflock4'" >> ~/.bash_aliases
     echo >> ~/.bash_aliases
     
-    ##
+    #
     echo "- An alias to quickly lock your xsession: 'lockscreen'" >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
     
@@ -1159,16 +1155,16 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo >> ~/Desktop/README_NEWALIASES.txt
 
 
-    ## Navigate up the directory path using '..n' instead of 'cd ../../'
-    ## In the example below, '..4' is used to go back 4 directory levels, and '..3' will go up 3 directory levels, '..2' goes up 2 directory levels...
-    ##
+    # Navigate up the directory path using '..n' instead of 'cd ../../'
+    # In the example below, '..4' is used to go back 4 directory levels, and '..3' will go up 3 directory levels, '..2' goes up 2 directory levels...
+    #
     echo 'alias ..="cd .."' >> ~/.bash_aliases
     echo 'alias ..2="cd ../.."' >> ~/.bash_aliases
     echo 'alias ..3="cd ../../.."' >> ~/.bash_aliases
     echo 'alias ..4="cd ../../../.."' >> ~/.bash_aliases
     echo 'alias ..5="cd ../../../../.."' >> ~/.bash_aliases
     echo >> ~/.bash_aliases
-    ##
+    #
     echo "- Navigate up the directory path using '..n' instead of 'cd ../../'" >> ~/Desktop/README_NEWALIASES.txt
     echo "      Instead of doing 'cd ..', to 'cd ../../../../..', use '..' to '..5' instead." >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
@@ -1180,7 +1176,7 @@ echo "30 7 * * * /usr/sbin/tripwire --check | mail -s 'Weekly Tripwire report' i
     echo "- An alias to quickly find the PID of xflux for killing with kill -9 <PID>" >> ~/Desktop/README_NEWALIASES.txt
     
     
-    ## DISABLE TOUCHPAD WHILE TYPING, AND APPLY A MORE REASONABLE TIME-DELAY HENCEFORTH
+    # DISABLE TOUCHPAD WHILE TYPING, AND APPLY A MORE REASONABLE TIME-DELAY HENCEFORTH
     echo 'alias tpdoff="syndaemon -i 1.0 -K -R -t -d"' >> ~/.bash_aliases
     echo 'alias "tpdoff" added to kill mouse touchpad while typing, with a 1 second delay.' >> ~/Desktop/README_NEWALIASES.txt 
     echo "No more accidentally dragging your palm over the laptop touchpad while typing." >> ~/Desktop/README_NEWALIASES.txt 
@@ -1195,33 +1191,34 @@ echo
     read -p "/   /  /  ///  Do you use the printer often? I ask, as we will be temporarily disabling listening service CUPS--a listening print service--for you, if not. Press [Y/n]."
         if [[ $REPLY =~ ^[Yy]$ ]]
 	then
-          ## KILLING CUPSD LISTENING SERVICE !
+          # KILLING CUPSD LISTENING SERVICE !
 	  sudo service cups-browsed stop
-    	  ## PREVENTING CUPSD FROM RISING AGAIN AFTER BEING SLAIN BY US AS SUCH
+    	  # PREVENTING CUPSD FROM RISING AGAIN AFTER BEING SLAIN BY US AS SUCH
     	  echo "manual" > ~/tmp.xxxxx/cupsd-browsed.override
     	  sudo chown root ~/tmp.xxxxx/cupsd-browsed.override
  	  sudo mv ~/tmp.xxxxx/cupsd-browsed.override /etc/init
 	fi
-	  ## INSTALL SNORT PREREQ. DEPENDENCIES  	
+	  # INSTALL SNORT and VAR PREREQ. DEPENDENCIES  	
   	  sudo apt-get install -y rails
+  	  sudo apt-get install -y snort
       	  sudo apt-get install -y default-jre
    	  sudo apt-get install -y default-jdk
    	  sudo apt-get install libxslt-dev libxml2-dev
-   	  ## INSTALL SNORBY: SNORT GUI (IS USED WITH SURICATA TOO)
+   	  ## INSTALL SNORBY: SNORT GUI
 	  sudo git clone git://github.com/Snorby/snorby.git ~/tmp.xxxxx
     	  cd ~/tmp.xxxxx && eval sudo bundle install
-	  ## UPDATING USER README      	 
+	  # UPDATING README      	 
 	  echo "[[SNORT IDS]---[H:CA Script v1 beta]] > ~/Desktop/README_SNORTIDS.txt"
       	  echo >> ~/Desktop/README_SNORTIDS.txt
       	  echo "SIGN UP FOR AN OINKCODE NOW! USE IT TO STAY UP TO DATE ON LATEST USER RULES!" >> ~/Desktop/README_SNORTIDS.txt 
       	  echo "OINKCODE NEEDED FOR PULLED PORKS RULE MANAGING ABILITY! USED TO AUTOMAGICALLY DOWNLOAD REGISTERED RULE PACKAGES!" >> ~/Desktop/README_SNORTIDS.txt
   
   
-        ## INSTALL PULLED PORK FOR AUTOMATIC AND EFFICIENT SNORT RULE MANAGEMENT
+        # INSTALL PULLED PORK FOR AUTOMATIC AND EFFICIENT SNORT RULE MANAGEMENT
         #sudo wget -P /usr/local/snort/ https://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
         #sudo tar -zxvf /user/local/snort/pulledpork-0.7.0.tar.gz -C /usr/local/snort
       
-       ## INSTALLING BARNYARD2 FOR USAGE WITH SURICATA
+       # INSTALLING BARNYARD2 FOR USAGE WITH SNORT
        sudo apt-get install -y build-essential libtool autoconf git
        sudo apt-get install -y libpcap-dev libmysqld-dev libprelude-dev
        cd ~ && mkdir ~/barnyard2-install
@@ -1231,7 +1228,7 @@ echo
        sudo ./configure --with-mysql --with-mysql-libraries=/usr/lib/x86_64-linux-gnu --enable-ipv6 --enable-prelude --prefix=$HOME/barnyard2-install
        sudo make
        sudo make install
-        ## CONFIGURING BARNYARD2 W/ SNORT IDS 
+         # CONFIGURING BARNYARD2 W/ SNORT IDS 
         sudo cp ~/barnyard2-install/etc/barnyard2.conf /usr/local/snort/etc
 	sudo mkdir /var/log/barnyard2
 	sudo chmod 666 /var/log/barnyard2
@@ -1241,19 +1238,19 @@ echo
 	sudo echo "grant CREATE, INSERT, SELECT, DELETE, UPDATE on snort.* to snort@localhost identified by 'snortpasswordherechangeme';" | mysql -u root -p 
 	sudo mkdir /usr/local/lib/snort_dynamicrules
 	cd /usr/lib/; sudo ln -s /usr/local/lib/libdnet.1.0.1 libdnet.1
-        ## ADDING OPENFPC FOR USAGE WITH SNORBY
+        # ADDING OPENFPC FOR USAGE WITH SNORBY
         sudo wget http://openfpc.googlecode.com/files/openfpc-0.5-281.tgz
         sudo tar -zxvf openfpc-0.5-281.tgz
 	./configure; make; sudo make install
-	##
-	## Installing LibCaca:
+	#
+	# Installing LibCaca:
 	wget -P ~/tmp.xxxxx caca.zoy.org/files/libcaca/libcaca-0.99.beta19.tar.gz
 	cd ~/tmp.xxxxx
         tar -zxvf libcaca-0.99.beta19.tar.gz 
         cd ~/tmp.xxxxx/libcaca-0.99.beta19 && eval sudo ./configure
         sudo make && eval sudo make install
         cd -
-        ## Toi
+        # Toi
         wget -P ~/tmp.xxxxx caca.zoy.org/raw-attachment/wiki/toilet/toilet-0.3.tar.gz
         tar -zxvf ~/tmp.xxxxx/toilet-0.3.tar.gz 
         cd ~/tmp.xxxxx/toilet-0.3 && eval sudo ./configure
@@ -1261,8 +1258,8 @@ echo
         cd -
 
 	
-        ###
-        ## INSTALL TRIPWIRE VIA APTITUDE
+        ##
+        # INSTALL TRIPWIRE VIA APTITUDE
         sudo apt-get install -y aptitude
 	sudo aptitude install tripwire
 	sudo apt-get install -y mailutils
@@ -1278,7 +1275,7 @@ echo
    
    
 
-	## Installing SecRelated Aliases
+	# Installing SecRelated Aliases
         echo 'alias startsnorby="cd /usr/local/snort/snorby && sudo bundle exec rails server -e production"' >> ~/.bash_aliases
 
 	echo 'alias tripwirecheck="sudo tripwire --check --interactive"' >> ~/.bash_aliases
@@ -1303,30 +1300,30 @@ echo
         echo "Also feel free to look up Linux Exploit Suggester and Linuxprivchecker for additional comfort (or discomfort, depending on findings)."x
 	sleep 3
 
-        ## Install Tiger in Ubuntu 
+        #Install tiger in ubuntu 
         sudo aptitude install tiger
         echo "To use TIGER, just type into terminal: 'sudo tiger', and then give it plenty of time to run through its testing process." >> ~/Desktop/OSSEC.txt
 
 	#X#######################X#
 	 ####ROOTKIT DETECTION####
+
         #X#######################X#
-	
-        ## INSTALLING ROOTKITHUNTER -
+	 # INSTALLING ROOTKITHUNTER -
         sudo apt-get install rkhunter
         echo "Adding 'sudo rkhunter --update' to @weekly cron recommended." >> ~/Desktop/OSSEC.txt
         echo 'alias scanforrootkits="sudo rkhunter -c"' >> ~/.bash_aliases
         echo "Added alias 'scanforrootkits' to allow just that. I suggest adding a cronjob, and piping a mail command to yourself for notification." >> ~/Desktop/README_NEWALIASES.txt
-	## INSTALLING CHKROOTKIT -
+	# INSTALLING CHKROOTKIT -
 	sudo apt-get install chkrootkit
 	echo "Adding @weekly 'sudo chkrootkit' job to cron is a wise move. CHKROOTKIT INSTALLED." >> ~/Desktop/OSSEC.txt
 
-       ## INSTALLING GUFW FIREWALL GUI (REPLACING FIRESTARTER)
+       # INSTALLING GUFW FIREWALL GUI (REPLACING FIRESTARTER)
         sudo apt-get install gufw 
 	echo "Added GUFW Firewall GUI." >> ~/Desktop/OSSEC.txt 
        fi
   
   
-    ## CREATE README FOR USER ON DESKTOP TEACHING ABOUT NEW ALIASES
+    # CREATE README FOR USER ON DESKTOP TEACHING ABOUT NEW ALIASES
     echo >> ~/Desktop/README_NEWALIASES.txt
     echo "[H:CA Script v1 beta]" >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
@@ -1335,11 +1332,11 @@ echo
     echo >> ~/Desktop/README_NEWALIASES.txt
     echo >> ~/Desktop/README_NEWALIASES.txt
   
-    ## CLEANING UP AGAIN
+    # CLEANING UP AGAIN
     sudo rm -rf ~/tmp.xxxxx
   
   
-    ## SCRIPT ENDING 
+    # SCRIPT ENDING 
     echo    "/   /   /  /// |The script has now finished executing, and you must reboot your computer immediately."
     read -p "/   /   /  /// |Press [Enter] key to reboot now..."   
     clear
@@ -1381,3 +1378,4 @@ echo
     sudo shutdown -P now
     
   fi  
+
