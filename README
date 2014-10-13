@@ -2,7 +2,7 @@
  To run the installer, open terminal, and type `bash installerHCA1.bash' within currently installed-to folder. Make sure your terminal window has already been maximized to FULL SCREEN.
                                                                                                         
  ABOUT:                                                                                                 
- A simple Bash script put together by H:CA Student Joe Coviello which installs certain useful packages, and is particularly useful after a fresh install. It also contains optional system tweaks for enhancing general ease of use, and comfort.                        
+ A simple Bash script for Linux and OSX put together by H:CA Student Joe Coviello which installs certain useful packages, and is particularly useful after a fresh install. It also contains optional system tweaks for enhancing general ease of use, and comfort.                        
                                                                                                        
 NOTES:                                                                                                 
 -Read this whole file over once, first, before executing it. In your doing so,
