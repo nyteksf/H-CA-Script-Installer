@@ -4,7 +4,7 @@
  ABOUT:                                                                                                 
  A simple Bash script for Linux and OSX put together by H:CA Student Joe Coviello which installs certain useful packages, and is particularly useful after a fresh install. It also contains optional system tweaks for enhancing general ease of use, and comfort.                        
                                                                                                        
-NOTES:                                                                                                 
+ NOTES:                                                                                                 
 -Read this whole file over once, first, before executing it. In your doing so,
  you may wish to comment out any unwanted package(s) by simply adding a "#" to the beginning of each respective line.          
 -The OS Optimization script is only for Linux at this time. Furthermore, it can only be run ONE TIME due to file changes being repeated otherwise. Do not interrupt the installer. Using '-t' more than once will damage your system!         
