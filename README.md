@@ -1,6 +1,6 @@
 # HACKER: CODING ACADEMY BASH INSTALL SCRIPT
 
- [u]USAGE INSTRUCTIONS:[/u]                                                                                    
+ USAGE INSTRUCTIONS:                                                                          
  To run the install script, students using Linux and OSX should open terminal and type 'bash installerHCA.bash' in its currently installed-to folder. Make sure your terminal window has already been maximized to FULL SCREEN.
                                                                                                         
  ABOUT:                                                                                                 
