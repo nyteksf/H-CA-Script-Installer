@@ -1,7 +1,8 @@
  # HACKER: CODING ACADEMY
+ # BASH INSTALL SCRIPT
 
  USAGE INSTRUCTIONS:                                                                                    
- To run the install script, students using Linux and OSX should open terminal and type `bash installerHCA.bash' in its currently installed-to folder. Make sure your terminal window has already been maximized to FULL SCREEN.
+ To run the install script, students using Linux and OSX should open terminal and type 'bash installerHCA.bash' in its currently installed-to folder. Make sure your terminal window has already been maximized to FULL SCREEN.
                                                                                                         
  ABOUT:                                                                                                 
  A simple Bash script written and put together by H:CA Student Joe Coviello. It automagically installs certain useful packages to set up a uniform programming environment, and is particularly useful to save time with after completing a fresh install. This script also contains optional system tweaks for enhancing general ease of use, performance and comfort.                        
