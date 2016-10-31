@@ -14,4 +14,4 @@
 
 -Read the whole bash file over once, first, before executing it. In doing so you may very well find that you wish to comment out any unwanted and unnecessary package(s) simply by adding a "#" to the beginning of each respective line.   
 
--WARNING: The OS Optimization subscript is only included for Linux users at this time. Furthermore, it must be noted that it can only be run ONE TIME due to system file changes being made. Do not interrupt this section of the installer! I repeat: using option '-t' more than once will damage your system files!                         
+-WARNING: The OS Optimization subscript is only included for Linux users at this time. Furthermore, it must be noted that it can only be run ONE TIME due to system file changes being made. Do not interrupt this section of the installer! I repeat: using option '-t' more than once will corrupt your system files!                         
