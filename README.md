@@ -12,7 +12,7 @@
 ### NOTES:                                       
 -On your local desktop you may look for the appearance of several related README files generated at the end. These will be found to contain useful documentation; the which will get your whole cohort rapidly up to speed. 
 
--Be sure to read the whole bash file over once before executing it. In doing so you may very well find out that you wish to comment out certain package(s). Accomplish this simply by adding a "#" to the beginning of each respectively desired line.   
+-Be sure to read the whole bash file over once before executing it. In doing so you may very well find out that you wish to comment out certain package(s). An example is if you for some weird reason preferred emacs over vim and wanted to avoid the installation. Accomplish this simply by adding a "#" to the beginning of each respectively undesired line.   
 e.g., <i>"# curl ..."</i>
 
 -WARNING: The OS Optimization subscript is only available for Linux users at this time. Should work on Ubunto and Debian for some time to come. Furthermore, it must be noted that it must itself only be run ONCE due to the system file changes being made. Do not interrupt this section of the installer if it has been selected! I repeat: using option '-t' more than one time will corrupt your system files! If this should occur, then simply rename the backups found in their same folders back to their originals by removing the file suffix '.bak' therefrom.
