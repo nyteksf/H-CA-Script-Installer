@@ -13,6 +13,6 @@
 -On your local desktop you may look for the appearance of several related README files generated at the end. These will be found to contain useful documentation; the which will get your whole cohort rapidly up to speed. 
 
 -Be sure to read the whole bash file over once before executing it. In doing so you may very well find out that you wish to comment out certain package(s). Accomplish this simply by adding a "#" to the beginning of each respectively desired line.   
-e.g.,<i>"# curl ..."</i>
+e.g., <i>"# curl ..."</i>
 
 -WARNING: The OS Optimization subscript is only included for Linux users at this time. Furthermore, it must be noted that it can only be run ONE TIME due to system file changes being made. Do not interrupt this section of the installer! I repeat: using option '-t' more than once will corrupt your system files! If this should occur, then simply rename the backups in the same folder to their originals.
