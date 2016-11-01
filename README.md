@@ -6,7 +6,7 @@
  This is a Bash script written and put together by H:CA Student Joe Coviello as a side project for the same institution. It automagically installs certain useful packages to set up a uniform programming environment; the which we formerly had to install ourselves. With that said, it is particularly useful for saving time after a fresh install. This script also additionally contains optional system tweaks for sake of enhancing general ease of use, performance and comfort. All modified files are automatically backed up.
 
 ### USAGE INSTRUCTIONS:                                                                          
- To run, students operating Linux or OSX should open terminal, and at the prompt type *'bash installerHCA.bash'* in its currently installed-to folder. Make sure your terminal window has already been maximized to FULL SCREEN to allow all of the messages involved in the installation and set up process to be clearly seen and understood, or just to best enjoy the streaming ASCII art.                                             
+ To run, students operating Linux or OSX should open terminal, and at the prompt type *'bash installerHCA.bash'* in its currently installed-to folder. Make sure your terminal window has already been maximized to FULL SCREEN to allow all of the messages involved in the installation and set up process to be clearly seen and understood, or even to best enjoy the streaming ASCII art.                                             
  
  
 ### NOTES:                                       
