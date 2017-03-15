@@ -1,4 +1,4 @@
-# HACKER: CODING ACADEMY BASH SCRIPT
+# HACKER: CODING ACADEMY BASH INSTALL SCRIPT
 
 [<img src="http://i66.tinypic.com/4qppjc.png">](http://i63.tinypic.com/30k9f6p.jpg)
 
