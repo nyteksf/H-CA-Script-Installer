@@ -1,6 +1,6 @@
 # HACKER: CODING ACADEMY BASH INSTALL SCRIPT
 
-[<img src="http://i66.tinypic.com/4qppjc.png">](http://i63.tinypic.com/30k9f6p.jpg)
+[<img src="http://i66.tinypic.com/4qppjc.png">](https://camo.githubusercontent.com/22c216442e8558878b8339a6659bc7545783bcf9/687474703a2f2f6936332e74696e797069632e636f6d2f33306b396636702e6a7067)
 
 ## CREATES STANDARDIZED CODING ENVIRONMENT PLUS
 
