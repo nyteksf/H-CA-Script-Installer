@@ -1,8 +1,8 @@
 # HACKER: CODING ACADEMY BASH INSTALL SCRIPT
 
-[<img src="http://i66.tinypic.com/4qppjc.png">](https://camo.githubusercontent.com/22c216442e8558878b8339a6659bc7545783bcf9/687474703a2f2f6936332e74696e797069632e636f6d2f33306b396636702e6a7067)
-
 ## CREATES STANDARDIZED CODING ENVIRONMENT PLUS
+
+[<img src="http://i66.tinypic.com/4qppjc.png">](https://camo.githubusercontent.com/22c216442e8558878b8339a6659bc7545783bcf9/687474703a2f2f6936332e74696e797069632e636f6d2f33306b396636702e6a7067)
 
 ### ABOUT:                                                                                                 
  This is a Bash script written and put together by H:CA Student Joe Coviello as a side project for the same institution. It automagically installs certain useful packages to set up a uniform programming environment; the which we formerly had to install ourselves. With that said, it is particularly useful for saving time after a fresh install. This script also additionally contains optional system tweaks for sake of enhancing general ease of use, performance and comfort. All modified files are automatically backed up.
