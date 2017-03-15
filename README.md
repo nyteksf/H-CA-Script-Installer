@@ -1,4 +1,6 @@
-# HACKER: CODING ACADEMY BASH SCRIPT
+# HACKER: CODING ACADEMY BASH INSTALL SCRIPT
+
+[<img src="http://i66.tinypic.com/4qppjc.png">](http://i63.tinypic.com/30k9f6p.jpg)
 
 ## CREATES STANDARDIZED CODING ENVIRONMENT PLUS
 
@@ -16,6 +18,3 @@
 e.g., <i>"# curl ..."</i>
 
 -WARNING: The OS Optimization subscript is only available for Linux users at this time. Furthermore, this option should only be run ONCE due to the system file changes made. Do not interrupt this section of the installer if it has been selected! I repeat: using option '-t' more than one time will corrupt your system files! If this should occur, then simply rename the most recent backups to their original filenames by removing the file suffix '.bak' therefrom.
-
-### SCREENSHOT:
-![Alt text](http://i63.tinypic.com/30k9f6p.jpg "Screenshot")
